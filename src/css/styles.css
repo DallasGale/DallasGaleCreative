@@ -95,6 +95,7 @@ nav {
 }
 
 .logo {
+  background-color: white;
   font-family: var(--default-font);
   padding: 10px;
   border: 1px solid black;
