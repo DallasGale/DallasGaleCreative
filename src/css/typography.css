@@ -3,6 +3,9 @@
   font-family: var(--default-font);
   font-size: 14px;
   line-height: 1.4;
+  strong {
+    font-family: var(--default-font-bold);
+  }
 }
 
 .paragraph {
