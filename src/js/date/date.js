@@ -52,7 +52,7 @@ function dateData() {
  
   // DOM Modification
   welcomeMSG.textContent = potd
-  iconElement.innerHTML = displayIcon();
+  // iconElement.innerHTML = displayIcon();
   dateElement.textContent = `${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)} ${year}`;
   timeElement.textContent = 
     `${hour}:${mins}:${formatSeconds(secs)}${meridiemIndicator(hour)}`;
