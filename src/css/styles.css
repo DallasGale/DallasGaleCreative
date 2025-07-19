@@ -8,8 +8,8 @@
   --highlight: rgb(195, 236, 195);
   --nav-font-size: 14px;
   --paragraph-size: 18px;
-  --default-font: Arial, Helvetica, sans-serif;
-  --default-font-bold: Arial, Helvetica, sans-serif;
+  --default-font: "HelveticaNeue-Med", Arial, Helvetica, sans-serif;
+  --default-font-bold: "HelveticaNeue-Bold", Arial, Helvetica, sans-serif;
   --special-font: "Vollkorn", "Times New Roman", Times, serif;
   --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
   --transition: all 0.18s ease-in-out;
