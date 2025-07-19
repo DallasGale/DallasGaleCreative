@@ -157,5 +157,6 @@ nav {
   .logo {
     position: relative;
     top: auto;
+    font-size: 16px;;
   }
 }
