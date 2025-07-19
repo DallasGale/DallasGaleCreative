@@ -19,6 +19,18 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header-content">
+        <p class="text-small text-weight-600">
+          Good <span id="header-welcome-msg"></span>!
+        </p>
+        <div id="header-icon" style="width: 20px; height: 20px;"></div>
+        <p class="date-content text-small text-weight-600">
+          <span class="u-capitalize text-color-grey-01" id="header-date"></span>
+          <span id="header-time" class="text-color-grey-01"></span>
+        </p>
+      </div>
+    </header>
     <main>
       <div>
         <img
@@ -72,7 +84,7 @@
           <a href="mailto:hello@dallasgale.com" class="cta">Contact Me</a>
         </div>
 
-        <p class="small-text">
+        <p class="text-small">
           things i like:
           <strong
             >html / css / javascript / typescript / storybook / react / svelte /
@@ -80,33 +92,15 @@
           >
         </p>
 
-        <p class="small-text">
+        <p class="text-small">
           &copy; 2025 Dallas Gale Creative | ABN 26 985 063 007
         </p>
-
-        <p class="small-text">Lighthouse Score:</p>
-        <div class="lighthouse">
-          <ul class="lighthouse-list">
-            <li class="small-text">
-              Performance Score: <span id="perf-score"></span>
-            </li>
-            <li class="small-text">
-              First Paint: <span id="first-paint"></span>
-            </li>
-            <li class="small-text">
-              Speed Index: <span id="speed-index"></span>
-            </li>
-            <li class="small-text">
-              Largest Contentful Paint:
-              <span id="largest-contentful-paint"></span>
-            </li>
-          </ul>
-        </div>
       </div>
     </main>
 
-    <script src="./src/js/perf.js" async defer></script>
-    <!-- Google tag (gtag.js) -->
+    <!-- <script type="module" src="./src/js/global.js"></script> -->
+    <script type="module" src="./src/js/ui/header.js"></script>
+    <script type="module" src="./src/js/date/date.js"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0Q7YLR9V6J"

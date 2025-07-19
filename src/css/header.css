@@ -1,0 +1,18 @@
+.header {
+  padding: 10px;
+}
+
+.header-content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-60px);
+}
+
+.date-content {
+  opacity: 0;
+  /* border-bottom: 1px solid rgb(0, 0, 0); */
+  padding: 4px 0;
+}

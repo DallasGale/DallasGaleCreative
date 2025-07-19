@@ -1,22 +1,14 @@
-@font-face {
-  font-family: "Vollkorn";
-  src: url("../fonts/Vollkorn/static/Vollkorn-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "VollkornBold";
-  src: url("../fonts/Vollkorn/static/Vollkorn-SemiBold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+@import "./fonts.css";
+@import "./typography.css";
+@import "./utils.css";
+@import "./header.css";
+
+
 :root {
   --highlight: rgb(195, 236, 195);
   --nav-font-size: 14px;
   --paragraph-size: 18px;
-  --default-font: Helvetica, sans-serif;
+  --default-font: "HelveticaNeue-Med", Arial, Helvetica, sans-serif;
   --special-font: "Vollkorn", "Times New Roman", Times, serif;
   --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
   --transition: all 0.18s ease-in-out;
@@ -28,7 +20,7 @@ body {
 }
 
 main {
-  max-width: 991px;
+  max-width: 1030px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -106,7 +98,7 @@ nav {
   font-weight: bold;
   float: left;
   position: absolute;
-  top: 30px;
+  top: 70px;
 }
 
 .ctas {
@@ -135,44 +127,16 @@ nav {
   }
 }
 
-.small-text {
-  font-family: var(--default-font);
-  font-size: 14px;
-  line-height: 1.4;
-}
 
-.paragraph {
-  font-family: var(--special-font);
-  font-size: var(--paragraph-size);
-}
 
-.paragraph a {
-  font-family: var(--special-font-bold);
-}
-
-.lighthouse {
-  padding: 20px;
-  background-color: rgb(33, 33, 33);
-}
-.lighthouse-list {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding-left: 0;
-  color: white;
-  li {
-    list-style: none;
-  }
-}
-
-@media (min-width: 991px) {
+@media (min-width: 780px) {
   :root {
     --paragraph-size: 24px;
   }
   main {
     margin-top: 10vh;
     display: grid;
-    gap: 60px;
+    gap: 36px;
     grid-template-columns: 244px 1fr;
   }
   nav {
