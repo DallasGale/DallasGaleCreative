@@ -47,7 +47,6 @@ function dateData() {
   const hour = date.getHours();
   const mins = date.getMinutes();
   const secs = date.getSeconds();
-
   const potd = partOfDay(hour)
 
  

@@ -31,7 +31,6 @@ a {
   text-decoration: none;
   display: inline-block;
   font-family: var(--default-font);
-  font-weight: bold;
   color: #000000;
   position: relative;
   cursor: pointer;
@@ -95,7 +94,6 @@ nav {
   max-width: 88px;
   width: auto;
   font-size: 16px;
-  font-weight: bold;
   float: left;
   position: absolute;
   top: 70px;
