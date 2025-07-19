@@ -1,5 +1,12 @@
 var key = "AIzaSyCDYDqYY9c0yqonUa2VYPEaGHy-WB3CJ4g";
 
+const perfScore = document.getElementById("perf-score");
+const firstPaint = document.getElementById("first-paint");
+const speedIndex = document.getElementById("speed-index");
+const largestConentfulPaint = document.getElementById(
+  "largest-contentful-paint"
+);
+
 async function run() {
   const apiEndpoint =
     "https://www.googleapis.com/pagespeedonline/v5/runPagespeed";
@@ -35,6 +42,7 @@ async function run() {
     }
 
     const lighthouse = json.lighthouseResult;
+    console.log({ lighthouse });
     const lighthouseMetrics = {
       "Performance Score": Math.round(
         lighthouse.categories.performance.score * 100
@@ -53,7 +61,11 @@ async function run() {
     };
 
     console.log("Lighthouse Results:");
-    console.log(lighthouseMetrics);
+    perfScore.innerText = lighthouseMetrics["Performance Score"];
+    firstPaint.innerText = lighthouseMetrics["First Contentful Paint"];
+    speedIndex.innerText = lighthouseMetrics["Speed Index"];
+    largestConentfulPaint.innerText =
+      lighthouseMetrics["Largest Contentful Paint"];
   } catch (error) {
     console.error("Fetching PageSpeed Insights failed:", error);
   }

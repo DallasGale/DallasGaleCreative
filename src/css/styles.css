@@ -150,6 +150,21 @@ nav {
   font-family: var(--special-font-bold);
 }
 
+.lighthouse {
+  padding: 20px;
+  background-color: rgb(33, 33, 33);
+}
+.lighthouse-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-left: 0;
+  color: white;
+  li {
+    list-style: none;
+  }
+}
+
 @media (min-width: 991px) {
   :root {
     --paragraph-size: 24px;
