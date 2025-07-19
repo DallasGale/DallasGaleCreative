@@ -1,0 +1,23 @@
+
+.text-small {
+  font-family: var(--default-font);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.paragraph {
+  font-family: var(--special-font);
+  font-size: var(--paragraph-size);
+}
+
+.paragraph a {
+  font-family: var(--special-font-bold);
+}
+
+.text-weight-600 {
+  font-weight: 400;;
+}
+
+.text-color-grey-01 {
+  color: var(--color-med-grey);
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Vollkorn";
+  src: url("../fonts/Vollkorn/static/Vollkorn-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "VollkornBold";
+  src: url("../fonts/Vollkorn/static/Vollkorn-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Med";
+  src: url("../fonts/helvetica-neue/HelveticaNeueMedium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeue-Bold";
+  src: url("../fonts/helvetica-neue/HelveticaNeueBold.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}

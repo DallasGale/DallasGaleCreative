@@ -1,0 +1,6 @@
+:root {
+  --color-med-grey: #ADADAD;
+}
+.u-capitalize {
+  text-transform: capitalize;
+}
