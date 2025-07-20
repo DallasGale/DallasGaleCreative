@@ -134,7 +134,7 @@ nav {
     --paragraph-size: 24px;
   }
   main {
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: grid;
     gap: 36px;
     grid-template-columns: 244px 1fr;
@@ -143,9 +143,9 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-bottom: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .avatar {
