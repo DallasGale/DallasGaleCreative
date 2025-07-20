@@ -16,3 +16,12 @@
   /* border-bottom: 1px solid rgb(0, 0, 0); */
   padding: 4px 0;
 }
+
+.icon {
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -5,14 +5,16 @@ async function runTests() {
   const formatSecondsModule = await import("../src/js/date/formatSeconds.mjs");
   const meridiemModule = await import("../src/js/date/meridiemIndicator.mjs");
   const parseDayModule = await import("../src/js/date/parseDay.mjs");
-  const partOfDayModule = await import("../src/js/date/partOfDay.mjs");
+  const diurnalPeriodsModule = await import("../src/js/date/diurnalPeriods.mjs");
   const daySuffixModule = await import("../src/js/date/daySuffix.mjs");
+  const formatHourModule = await import("../src/js/date/formatHour.mjs");
 
   const formatSeconds = formatSecondsModule.default;
   const meridiemIndicator = meridiemModule.default;
   const parseDay = parseDayModule.default;
-  const partOfDay = partOfDayModule.default;
+  const diurnalPeriods = diurnalPeriodsModule.default;
   const daySuffix = daySuffixModule.default;
+  const formatHour = formatHourModule.default;
 
   describe("meridiemIndicator() returns correct am or pm ", () => {
     it("returns PM #1", () => {
@@ -55,7 +57,7 @@ async function runTests() {
 
   describe("parseDay() returns human-readable day", () => {
     it("returns invalid day", () => {
-      assert.strictEqual(parseDay(0), "invalid day");
+      assert.strictEqual(parseDay(7), "invalid day");
     });
 
     it("returns monday", () => {
@@ -83,31 +85,31 @@ async function runTests() {
     });
 
     it("returns sunday", () => {
-      assert.strictEqual(parseDay(7), "sunday");
+      assert.strictEqual(parseDay(0), "sunday");
     });
   });
 
-  describe("partOfDay() returns a message appropriate for time of day", () => {
+  describe("diurnalPeriods() returns a message appropriate for time of day", () => {
     it("returns morning #1", () => {
-      assert.strictEqual(partOfDay(9), "morning");
+      assert.strictEqual(diurnalPeriods(9), "morning");
     });
     it("returns morning #2", () => {
-      assert.strictEqual(partOfDay(3), "evening");
+      assert.strictEqual(diurnalPeriods(3), "evening");
     });
     it("returns afternoon #1", () => {
-      assert.strictEqual(partOfDay(12), "afternoon");
+      assert.strictEqual(diurnalPeriods(12), "afternoon");
     });
     it("returns afternoon #2", () => {
-      assert.strictEqual(partOfDay(17), "afternoon");
+      assert.strictEqual(diurnalPeriods(17), "afternoon");
     });
     it("returns evening #1", () => {
-      assert.strictEqual(partOfDay(23), "evening");
+      assert.strictEqual(diurnalPeriods(23), "evening");
     });
     it("returns evening #2", () => {
-      assert.strictEqual(partOfDay(18), "evening");
+      assert.strictEqual(diurnalPeriods(18), "evening");
     });
     it("returns evening #2", () => {
-      assert.strictEqual(partOfDay(0), "evening");
+      assert.strictEqual(diurnalPeriods(0), "evening");
     });
   });
 
@@ -132,6 +134,24 @@ async function runTests() {
     });
     it("17th", () => {
       assert.strictEqual(daySuffix(17), "th");
+    });
+  });
+
+   describe("formatHour() returns 12hr conversion of 24hr time", () => {
+    it("21", () => {
+      assert.strictEqual(formatHour(21), 9);
+    });
+    it("1", () => {
+      assert.strictEqual(formatHour(1), 1);
+    });
+    it("18", () => {
+      assert.strictEqual(formatHour(18), 6);
+    });
+    it("3", () => {
+      assert.strictEqual(formatHour(3), 3);
+    });
+    it("0", () => {
+      assert.strictEqual(formatHour(0), 12);
     });
   });
 }
