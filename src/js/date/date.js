@@ -1,14 +1,15 @@
-import afternoonIcon from "../../images/afternoon.js";
+import afternoonIcon from "../icons/afternoon.js";
 import daySuffix from "./daySuffix.mjs";
-import eveningIcon from "../../images/evening.js";
+import eveningIcon from "../icons/evening.js";
 import formatHour from "./formatHour.mjs";
 import formatSeconds from "./formatSeconds.mjs";
 import meridiemIndicator from "./meridiemIndicator.mjs";
-import morningIcon from "../../images/morning.js";
+import morningIcon from "../icons/morning.js";
 import parseDay from "./parseDay.mjs";
 import diurnalPeriods from "./diurnalPeriods.mjs";
 
 // DOM Elements
+const body = document.querySelector("body");
 const welcomeMSG = document.querySelector("#header-welcome-msg");
 const timeElement = document.querySelector("#header-time");
 const dateElement = document.querySelector("#header-date");
@@ -39,20 +40,34 @@ function displayIcon(daySegments) {
   } else return eveningIcon
 }
 
+function diurnalThemeMode(hour) {
+  console.log({body, hour})
+  if (diurnalPeriods(hour) === "morning") {
+    body.classList.add("morning")
+  } else if (diurnalPeriods(hour) === "afternoon") {
+    body.classList.add("afternoon")
+  } else {
+    body.classList.add("evening")
+  }
+}
+
 function dateData() {
   const date = new Date();
   const day = date.getDay();
-  const dayOfMonth = date.getDate();
-  const year = date.getFullYear();
   const hour = date.getHours();
+  const daySegments = diurnalPeriods(hour)
+  const dayOfMonth = date.getDate();
   const mins = date.getMinutes();
   const secs = date.getSeconds();
-  const daySegments = diurnalPeriods(hour)
+  const year = date.getFullYear();
+
+  // Theme Mode
+  diurnalThemeMode(hour)
 
   // DOM Modification
-  welcomeMSG.textContent = daySegments
-  iconElement.innerHTML = displayIcon(daySegments);
   dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)}, ${year}`;
+  iconElement.innerHTML = displayIcon(daySegments);
+  welcomeMSG.textContent = daySegments
   timeElement.textContent = 
     `${formatHour(hour)}:${mins}:${formatSeconds(secs)}${meridiemIndicator(hour)}`;
 }

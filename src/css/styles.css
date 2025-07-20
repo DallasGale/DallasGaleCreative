@@ -2,22 +2,28 @@
 @import "./typography.css";
 @import "./utils.css";
 @import "./header.css";
+@import "./nav.css";
 
 
 :root {
+  --site-bg: white;
+  --site-text-color: black;
   --highlight: rgb(195, 236, 195);
+  --cta-bg-color: black;
+  --cta-color: white;
   --nav-font-size: 14px;
   --paragraph-size: 18px;
   --default-font: "HelveticaNeue-Med", Arial, Helvetica, sans-serif;
   --default-font-bold: "HelveticaNeue-Bold", Arial, Helvetica, sans-serif;
   --special-font: "Vollkorn", "Times New Roman", Times, serif;
   --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
+  --svg-icon-fill: black;
   --transition: all 0.18s ease-in-out;
 }
 body {
   font-family: var(--special-font);
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--site-text-color);;
+  background-color: var(--site-bg);
 }
 
 main {
@@ -32,7 +38,7 @@ a {
   text-decoration: none;
   display: inline-block;
   font-family: var(--default-font);
-  color: #000000;
+  color: var(--site-text-color);
   position: relative;
   cursor: pointer;
   &:hover {
@@ -43,7 +49,7 @@ a {
 
 a:not(.cta, .link) {
   &:before {
-    opacity: 0.4;
+    opacity: 1;
     content: "";
     position: absolute;
     background-color: var(--highlight);
@@ -71,7 +77,7 @@ nav {
   width: 100%;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--site-text-color);;
   gap: 20px;
 }
 
@@ -88,10 +94,10 @@ nav {
 }
 
 .logo {
-  background-color: white;
+  /* background-color: white; */
   font-family: var(--default-font);
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--site-text-color);;
   display: inline-flex;
   max-width: 90px;
   width: auto;
@@ -112,8 +118,8 @@ nav {
 .cta {
   font-family: var(--default-font);
   font-size: 16px;
-  background-color: black;
-  color: white;
+  background-color: var(--cta-bg-color);
+  color: var(--cta-color);
   padding: 10px;
   text-decoration: none;
   font-weight: 600;
@@ -159,4 +165,16 @@ nav {
     top: auto;
     font-size: 16px;;
   }
+}
+
+
+
+/* Theme Mode */
+body.evening {
+  --site-bg: rgb(19, 19, 19);
+  --site-text-color: white;
+  --highlight: rgb(16, 62, 36);
+  --cta-bg-color: white;
+  --cta-color: black;
+  --svg-icon-fill: white;
 }
