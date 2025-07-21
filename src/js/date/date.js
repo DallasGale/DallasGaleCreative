@@ -3,6 +3,7 @@ import daySuffix from "./daySuffix.mjs";
 import eveningIcon from "../icons/evening.js";
 import formatHour from "./formatHour.mjs";
 import formatSeconds from "./formatSeconds.mjs";
+import formatMonth from "./formatMonth.mjs";
 import meridiemIndicator from "./meridiemIndicator.mjs";
 import morningIcon from "../icons/morning.js";
 import parseDay from "./parseDay.mjs";
@@ -56,16 +57,18 @@ function dateData() {
   const day = date.getDay();
   const hour = date.getHours();
   const daySegments = diurnalPeriods(hour)
+  const month = date.getMonth();
   const dayOfMonth = date.getDate();
   const mins = date.getMinutes();
   const secs = date.getSeconds();
   const year = date.getFullYear();
+  
 
   // Theme Mode
   diurnalThemeMode(hour)
 
   // DOM Modification
-  dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)}, ${year}`;
+  dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)} ${formatMonth(month)}, ${year}`;
   iconElement.innerHTML = displayIcon(daySegments);
   welcomeMSG.textContent = daySegments
   timeElement.textContent = 
