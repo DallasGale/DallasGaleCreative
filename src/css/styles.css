@@ -142,7 +142,7 @@ nav {
   main {
     margin-top: 5vh;
     display: grid;
-    gap: 36px;
+    gap: 42px;
     grid-template-columns: 244px 1fr;
   }
   nav {
