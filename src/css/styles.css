@@ -10,6 +10,10 @@
   --site-text-color: black;
   --highlight: rgb(195, 236, 195);
   --cta-bg-color: black;
+  --cta-bg-hover-color: white;
+  --cta-text-hover-color: black;
+  --cta-border-hover-color: black;
+  --hover-shadow: black;
   --cta-color: white;
   --nav-font-size: 14px;
   --paragraph-size: 18px;
@@ -94,7 +98,6 @@ nav {
 }
 
 .logo {
-  /* background-color: white; */
   font-family: var(--default-font);
   padding: 10px;
   border: 1px solid var(--site-text-color);;
@@ -121,16 +124,18 @@ nav {
   background-color: var(--cta-bg-color);
   color: var(--cta-color);
   padding: 10px;
-  text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
-  border: 1px solid black;
-  &:hover {
-    background-color: white;
-    color: black;
-    opacity: 1;
-    transition: var(--transition);
-  }
+  border: 1px solid var(--cta-border-hover-color)
+}
+
+.cta:hover {
+  background-color: var(--cta-bg-hover-color);
+  color: var(--cta-text-hover-color);
+  opacity: 1;
+  transition: var(--transition);
+  box-shadow: -5px 6px 0px 0px var(--hover-shadow);
+  text-decoration: none;
 }
 
 
@@ -163,7 +168,11 @@ nav {
   .logo {
     position: relative;
     top: auto;
-    font-size: 16px;;
+    transition: var(--transition);
+    font-size: 16px;
+  }
+  .logo:hover {
+    box-shadow: -5px 6px 0px 0px var(--hover-shadow);
   }
 }
 
@@ -176,5 +185,9 @@ body.evening {
   --highlight: rgb(16, 62, 36);
   --cta-bg-color: white;
   --cta-color: black;
+  --cta-border-hover-color: white;
   --svg-icon-fill: white;
+  --hover-shadow: white;
+  --cta-bg-hover-color: black;
+  --cta-text-hover-color: white;
 }
