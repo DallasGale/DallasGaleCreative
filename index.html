@@ -50,10 +50,16 @@
             >
           </div>
           <div>
-            <a class="link nav-icon" href="https://github.com/dallasgale" id="github" style="width: 24px; height: 24px;">GitHub</a>
+            <a class="link nav-icon" href="https://github.com/dallasgale" id="github" style="width: 24px; height: 24px;" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'GITHUB_link'
+            });">GitHub</a>
           </div>
           <div>
-            <a class="link nav-icon" href="https://www.linkedin.com/in/dallas-gale/" id="linkedin" style="width: 24px; height: 24px;">
+            <a class="link nav-icon" href="https://www.linkedin.com/in/dallas-gale/" id="linkedin" style="width: 24px; height: 24px;" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'LINKEDIN_link'
+            });"
               LinkedIn
             </a>
           </div>
@@ -66,21 +72,39 @@
         <p class="paragraph">
           Since 2011, I've been creating websites for startups, large
           organisations (<a href="https://www.abc.net.au/news" target="_blank"
-            >ABC</a
-          >, <a href="https://www.acer.org/au/" target="_blank">ACER</a>) and
+             onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'ABC_link'
+            });">ABC</a
+          >, <a href="https://www.acer.org/au/" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'ACER_link'});">ACER</a>) and
           agencies including
-          <a href="https://www.dentsu.com/au/en" target="_blank"
-            >Isobar (Dentsu)</a
-          >,
-          <a href="https://primemotive.com.au/" target="_blank">Prime Motive</a
-          >, <a href="https://hardhat.com.au/" target="_blank">Hardhat</a>
+          <a href="https://www.dentsu.com/au/en" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'ISOBAR_link'
+            });">Isobar (Dentsu)</a>,
+          <a href="https://primemotive.com.au/" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'PRIME_MOTIVE_link'
+            });">Prime Motive</a>, 
+            <a href="https://hardhat.com.au/" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'HARDHAR_link'
+            });">Hardhat</a>
           &amp;
-          <a href="https://thinkerbell.com/" target="_blank">Thinkerbell</a>.
+          <a href="https://thinkerbell.com/" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'THINKERBELL_link'
+            });">Thinkerbell</a>.
         </p>
 
         <div class="ctas">
           <a href="./src/downloads/folio.pdf" class="cta">Download Folio</a>
-          <a href="mailto:hello@dallasgale.com" class="cta">Contact Me</a>
+          <a href="mailto:hello@dallasgale.com" class="cta" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'CONTACT_ME_link'
+            });">Contact Me</a>
         </div>
 
         <p class="text-small">
