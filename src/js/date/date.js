@@ -61,7 +61,7 @@ function dateData() {
   const month = date.getMonth();
   const dayOfMonth = date.getDate();
   const mins = date.getMinutes();
-  const secs = date.getSeconds();
+  // const secs = date.getSeconds();
   const year = date.getFullYear();
   
 
