@@ -4,6 +4,7 @@ import eveningIcon from "../icons/evening.js";
 import formatHour from "./formatHour.mjs";
 import formatSeconds from "./formatSeconds.mjs";
 import formatMonth from "./formatMonth.mjs";
+import formatMin from "./formatMin.mjs";
 import meridiemIndicator from "./meridiemIndicator.mjs";
 import morningIcon from "../icons/morning.js";
 import parseDay from "./parseDay.mjs";
@@ -72,7 +73,7 @@ function dateData() {
   iconElement.innerHTML = displayIcon(daySegments);
   welcomeMSG.textContent = daySegments
   timeElement.textContent = 
-    `${formatHour(hour)}:${mins}:${formatSeconds(secs)}${meridiemIndicator(hour)}`;
+    `${formatHour(hour)}:${formatMin(mins)} ${meridiemIndicator(hour)}`;
 }
 
 function setDate() {
