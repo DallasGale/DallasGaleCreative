@@ -2,7 +2,6 @@ import afternoonIcon from "../icons/afternoon.js";
 import daySuffix from "./daySuffix.mjs";
 import eveningIcon from "../icons/evening.js";
 import formatHour from "./formatHour.mjs";
-import formatSeconds from "./formatSeconds.mjs";
 import formatMonth from "./formatMonth.mjs";
 import formatMin from "./formatMin.mjs";
 import meridiemIndicator from "./meridiemIndicator.mjs";
@@ -61,7 +60,6 @@ function dateData() {
   const month = date.getMonth();
   const dayOfMonth = date.getDate();
   const mins = date.getMinutes();
-  // const secs = date.getSeconds();
   const year = date.getFullYear();
   
 
