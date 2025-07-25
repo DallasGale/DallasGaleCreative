@@ -1,20 +1,22 @@
-const { test, describe, it } = require("node:test");
+const {  describe, it } = require("node:test");
 const assert = require("node:assert");
 
 async function runTests() {
-  const formatSecondsModule = await import("../src/js/date/formatSeconds.mjs");
-  const meridiemModule = await import("../src/js/date/meridiemIndicator.mjs");
-  const parseDayModule = await import("../src/js/date/parseDay.mjs");
-  const diurnalPeriodsModule = await import("../src/js/date/diurnalPeriods.mjs");
-  const daySuffixModule = await import("../src/js/date/daySuffix.mjs");
-  const formatHourModule = await import("../src/js/date/formatHour.mjs");
+  const diurnalPeriodsModule = await import("../../src/js/date/diurnalPeriods.mjs");
+  const daySuffixModule = await import("../../src/js/date/daySuffix.mjs");
+  const formatSecondsModule = await import("../../src/js/date/formatSeconds.mjs");
+  const formatHourModule = await import("../../src/js/date/formatHour.mjs");
+  const formatMinModule = await import("../../src/js/date/formatMin.mjs");
+  const meridiemModule = await import("../../src/js/date/meridiemIndicator.mjs");
+  const parseDayModule = await import("../../src/js/date/parseDay.mjs");
 
-  const formatSeconds = formatSecondsModule.default;
-  const meridiemIndicator = meridiemModule.default;
-  const parseDay = parseDayModule.default;
   const diurnalPeriods = diurnalPeriodsModule.default;
   const daySuffix = daySuffixModule.default;
   const formatHour = formatHourModule.default;
+  const formatMin = formatMinModule.default;
+  const formatSeconds = formatSecondsModule.default;
+  const meridiemIndicator = meridiemModule.default;
+  const parseDay = parseDayModule.default;
 
   describe("meridiemIndicator() returns correct am or pm ", () => {
     it("returns PM #1", () => {
@@ -52,6 +54,19 @@ async function runTests() {
     });
     it("returns double digit #2", () => {
       assert.strictEqual(formatSeconds(10), 10);
+    });
+  });
+
+    describe("formatMin() returns double digit minutes", () => {
+    it("returns double digit #1", () => {
+      assert.strictEqual(formatMin(0), "00");
+    });
+
+    it("returns double digit #2", () => {
+      assert.strictEqual(formatMin(6), "06");
+    });
+    it("returns double digit #2", () => {
+      assert.strictEqual(formatMin(10), 10);
     });
   });
 
