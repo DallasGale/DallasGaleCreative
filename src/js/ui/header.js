@@ -1,3 +1,5 @@
+import "../date/date.js";
+
 const enterTransition = [
   {opacity: 0, transform: "translateY(-60px)"},
   {opacity: 1, transform: "translateY(0)"}

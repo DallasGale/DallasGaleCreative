@@ -42,7 +42,6 @@ function displayIcon(daySegments) {
 }
 
 function diurnalThemeMode(hour) {
-  console.log({body, hour})
   if (diurnalPeriods(hour) === "morning") {
     body.classList.add("morning")
   } else if (diurnalPeriods(hour) === "afternoon") {
