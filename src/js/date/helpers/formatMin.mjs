@@ -1,5 +1,5 @@
 function formatMin(min) {
-  if (min >= 10 && min <= 59) return min
+  if (min >= 10 && min <= 59) return min;
   else {
     switch (min) {
       case 0:
@@ -26,6 +26,6 @@ function formatMin(min) {
         return "invalid min";
     }
   }
-}
+};
 
 export default formatMin;

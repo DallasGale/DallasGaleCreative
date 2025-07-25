@@ -13,8 +13,9 @@
   font-size: var(--paragraph-size);
 }
 
-.paragraph a {
+.paragraph-link {
   font-family: var(--special-font-bold);
+  color: var(--paragraph-link-color);
 }
 
 .text-weight-600 {

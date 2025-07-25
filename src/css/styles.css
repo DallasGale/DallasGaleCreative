@@ -2,7 +2,6 @@
 @import "./typography.css";
 @import "./utils.css";
 @import "./header.css";
-@import "./nav.css";
 
 
 :root {
@@ -14,6 +13,7 @@
   --cta-text-hover-color: black;
   --cta-border-hover-color: black;
   --hover-shadow: black;
+  --paragraph-link-color: black;
   --cta-color: white;
   --nav-font-size: 14px;
   --paragraph-size: 18px;
@@ -74,16 +74,6 @@ a:not(.cta, .link) {
   }
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid var(--site-text-color);;
-  gap: 20px;
-}
 
 .link {
   font-size: var(--nav-font-size);
@@ -150,14 +140,14 @@ nav {
     gap: 42px;
     grid-template-columns: 244px 1fr;
   }
-  nav {
+  /* nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     padding-bottom: 30px;
     margin-bottom: 40px;
-  }
+  } */
 
   .avatar {
     width: 224px;
@@ -182,10 +172,11 @@ nav {
 body.evening {
   --site-bg: rgb(19, 19, 19);
   --site-text-color: white;
-  --highlight: rgb(16, 62, 36);
+  --highlight: #42ad71;
   --cta-bg-color: white;
   --cta-color: black;
   --cta-border-hover-color: white;
+  --paragraph-link-color: black;
   --svg-icon-fill: white;
   --hover-shadow: white;
   --cta-bg-hover-color: black;
