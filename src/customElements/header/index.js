@@ -10,7 +10,6 @@ import diurnalPeriods from "./helpers/diurnalPeriods.mjs";
 // Utility Functions
 import displayIcon from "./utils/displayIcon.mjs";
 
-
 // Create a class for the element
 class CustomHeader extends HTMLElement {
   // static hasAnimated = false;
@@ -156,7 +155,7 @@ class CustomHeader extends HTMLElement {
     this.render();
 
     const hasAnimated = sessionStorage.getItem("component-animated") === "true";
-   
+
     // Date Logic
     const body = document.querySelector("body");
     const welcomeMSG = this.shadowRoot.querySelector("#header-welcome-msg");
@@ -201,22 +200,9 @@ class CustomHeader extends HTMLElement {
     }, 1000);
   };
 
-  // disconnectedCallback() {
-  //   console.log("Custom element removed from page.");
-  // }
-
   connectedMoveCallback() {
     console.log("Custom element moved with moveBefore()");
   }
-
-  // adoptedCallback() {
-  //   console.log("Custom element moved to new page.");
-  // }
-
-  // attributeChangedCallback(name) {
-  //   console.log(`Attribute ${name} has changed.`);
-  // }
-
 }
 
 customElements.define("custom-header", CustomHeader);
