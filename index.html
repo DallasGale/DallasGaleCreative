@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dallas Gale | Web Developer & UI Designer</title>
+    <title>Dallas Gale Creative | Web Developer & UI Designer</title>
     <meta
       name="description"
       content="Experienced frontend developer and digital designer based in Melbourne, Australia.. Over a decade of expertise in web development for agencies and startups across Australia, LA, and NYC. View my portfolio and contact me for custom web solutions."
@@ -16,23 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="./src/css/styles.css" />
-    
   </head>
 
   <body>
-    <header class="header">
-      <h1 class="logo">Dallas Gale Creative.</h1>
-      <div class="header-content">
-        <p class="text-small text-weight-600">
-          Good <span id="header-welcome-msg"></span>!
-        </p>
-        <div id="header-icon" class="icon"></div>
-        <p class="date-content text-small text-weight-600">
-          <span class="u-capitalize text-color-grey-01" id="header-date"></span>
-          <span id="header-time" class="text-color-grey-01"></span>
-        </p>
-      </div>
-    </header>
+    <custom-header></custom-header>
     <main>
       <div>
         <img
@@ -44,27 +31,6 @@
         />
       </div>
       <div>
-        <nav>
-          <div>
-            <a class="link" href="mailto:hello@dallasgale.com"
-              >hello[at]dallasgale.com</a
-            >
-          </div>
-          <div>
-            <a class="link nav-icon" href="https://github.com/dallasgale" id="github" style="width: 24px; height: 24px;" onclick="gtag('event', 'click', {
-              event_category: 'outbound',
-              event_label: 'GITHUB_link'
-            });">GitHub</a>
-          </div>
-          <div>
-            <a class="link nav-icon" href="https://www.linkedin.com/in/dallas-gale/" id="linkedin" style="width: 24px; height: 24px;" onclick="gtag('event', 'click', {
-              event_category: 'outbound',
-              event_label: 'LINKEDIN_link'
-            });">
-              LinkedIn
-            </a>
-          </div>
-        </nav>
         <p class="paragraph">
           Hey, I'm Dallas Gale, a web developer and UI designer from Melbourne,
           Australia.
@@ -72,29 +38,30 @@
 
         <p class="paragraph">
           Since 2011, I've been creating websites for startups, large
-          organisations (<a href="https://www.abc.net.au/news" target="_blank"
+          organisations (
+          <a class="paragraph-link" href="https://www.abc.net.au/news" target="_blank"
              onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'ABC_link'
             });">ABC</a
-          >, <a href="https://www.acer.org/au/" target="_blank" onclick="gtag('event', 'click', {
+          >, <a class="paragraph-link" href="https://www.acer.org/au/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'ACER_link'});">ACER</a>) and
           agencies including
-          <a href="https://www.dentsu.com/au/en" target="_blank" onclick="gtag('event', 'click', {
+          <a class="paragraph-link" href="https://www.dentsu.com/au/en" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'ISOBAR_link'
             });">Isobar (Dentsu)</a>,
-          <a href="https://primemotive.com.au/" target="_blank" onclick="gtag('event', 'click', {
+          <a class="paragraph-link" href="https://primemotive.com.au/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'PRIME_MOTIVE_link'
             });">Prime Motive</a>, 
-            <a href="https://hardhat.com.au/" target="_blank" onclick="gtag('event', 'click', {
+            <a class="paragraph-link" href="https://hardhat.com.au/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'HARDHAR_link'
             });">Hardhat</a>
           &amp;
-          <a href="https://thinkerbell.com/" target="_blank" onclick="gtag('event', 'click', {
+          <a class="paragraph-link"  href="https://thinkerbell.com/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'THINKERBELL_link'
             });">Thinkerbell</a>. I specialise in creating pixel-perfect responsive, accessible and performant web projects.
@@ -115,17 +82,18 @@
             ruby / rails / express / sanity.io / designing with code</strong
           >
         </p>
-
         <p class="text-small">
           &copy; 2025 Dallas Gale Creative | ABN 26 985 063 007
         </p>
       </div>
     </main>
 
-    <!-- <script type="module" src="./src/js/global.js"></script> -->
-    <script type="module" src="./src/js/ui/header.js"></script>
-    <script type="module" src="./src/js/ui/nav.js"></script>
-    <script type="module" src="./src/js/date/date.js"></script>
+    <!-- Javascript -->
+    <!-- <script type="module" src="./src/js/ui/header.js"></script> -->
+    <script type="module" src="./src/customElements/header/index.js"></script>
+    <script type="module" src="./src/customElements/nav/index.js"></script>
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0Q7YLR9V6J"
