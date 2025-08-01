@@ -19,19 +19,7 @@
   </head>
 
   <body>
-    <header class="header">
-      <h1 class="logo">Dallas Gale Creative.</h1>
-      <div class="header-content">
-        <p class="text-small text-weight-600">
-          Good <span id="header-welcome-msg"></span>!
-        </p>
-        <div id="header-icon" class="icon"></div>
-        <p class="date-content text-small text-weight-600">
-          <span class="u-capitalize text-color-grey-01" id="header-date"></span>
-          <span id="header-time" class="text-color-grey-01"></span>
-        </p>
-      </div>
-    </header>
+    <custom-header></custom-header>
     <main>
       <div>
         <img
@@ -43,7 +31,6 @@
         />
       </div>
       <div>
-        <custom-nav></custom-nav>
         <p class="paragraph">
           Hey, I'm Dallas Gale, a web developer and UI designer from Melbourne,
           Australia.
@@ -102,8 +89,8 @@
     </main>
 
     <!-- Javascript -->
-    <script type="module" src="./src/js/ui/header.js"></script>
-    <!-- <script type="module" src="./src/js/ui/nav.js"></script> -->
+    <!-- <script type="module" src="./src/js/ui/header.js"></script> -->
+    <script type="module" src="./src/customElements/header/index.js"></script>
     <script type="module" src="./src/customElements/nav/index.js"></script>
 
     <!-- Google Analytics -->

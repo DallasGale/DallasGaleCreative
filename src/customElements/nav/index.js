@@ -1,5 +1,5 @@
-import githubIcon from "./github.js";
-import linkedinIcon from "./linkedin.js";
+import githubIcon from "./icons/github.js";
+import linkedinIcon from "./icons/linkedin.js";
 
 // Create a class for the element
 class CustomNav extends HTMLElement {
@@ -16,13 +16,11 @@ class CustomNav extends HTMLElement {
       <style>
         .nav {
           display: flex;
-          flex-direction: column;
+          align-items: center;
+          flex-direction: row;
           justify-content: space-between;
           width: 100%;
-          padding-bottom: 30px;
-          margin-bottom: 30px;
-          border-bottom: 1px solid var(--site-text-color);;
-          gap: 20px;
+          gap: 10px;
         }
 
         .nav-icon {
@@ -38,6 +36,7 @@ class CustomNav extends HTMLElement {
           font-size: var(--nav-font-size);
           font-family: var(--default-font-bold);
           display: inline;
+          text-decoration: none;
         }
 
         @media (min-width: 780px) { 
@@ -46,8 +45,9 @@ class CustomNav extends HTMLElement {
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            gap: 20px;
           }
         }
       </style>
@@ -58,6 +58,16 @@ class CustomNav extends HTMLElement {
             hello[at]dallasgale.com
           </a>
         </div>
+        <!-- <div>
+          <a class="link" href="/stories/">
+            stories
+          </a>
+        </div>
+        <div>
+          <a class="link" href="/projects/">
+            projects
+          </a>
+        </div> -->
         <div>
           <a class="link nav-icon" href="https://github.com/dallasgale" 
             id="github" style="width: 24px; height: 24px;" 
@@ -87,21 +97,21 @@ class CustomNav extends HTMLElement {
     linkedin.innerHTML = linkedinIcon;
   }
 
-  disconnectedCallback() {
-    console.log("Custom element removed from page.");
-  }
+  // disconnectedCallback() {
+  //   console.log("Custom element removed from page.");
+  // }
 
-  connectedMoveCallback() {
-    console.log("Custom element moved with moveBefore()");
-  }
+  // connectedMoveCallback() {
+  //   console.log("Custom element moved with moveBefore()");
+  // }
 
-  adoptedCallback() {
-    console.log("Custom element moved to new page.");
-  }
+  // adoptedCallback() {
+  //   console.log("Custom element moved to new page.");
+  // }
 
-  attributeChangedCallback(name) {
-    console.log(`Attribute ${name} has changed.`);
-  }
+  // attributeChangedCallback(name) {
+  //   console.log(`Attribute ${name} has changed.`);
+  // }
 }
 
 customElements.define("custom-nav", CustomNav);

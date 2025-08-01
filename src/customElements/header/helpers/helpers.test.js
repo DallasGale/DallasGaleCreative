@@ -53,7 +53,7 @@ async function runTests() {
       assert.strictEqual(formatSeconds(6), "06");
     });
     it("returns double digit #2", () => {
-      assert.strictEqual(formatSeconds(10), "10");
+      assert.strictEqual(formatSeconds(10), 10);
     });
   });
 
@@ -66,7 +66,7 @@ async function runTests() {
       assert.strictEqual(formatMin(6), "06");
     });
     it("returns double digit #2", () => {
-      assert.strictEqual(formatMin(10), "10");
+      assert.strictEqual(formatMin(10), 10);
     });
   });
 

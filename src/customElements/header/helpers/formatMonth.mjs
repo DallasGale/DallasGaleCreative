@@ -1,29 +1,29 @@
 function formatMonth(month) {
   switch (month) {
     case 0:
-      return "jan";
+      return "Jan";
     case 1:
-      return "feb";
+      return "Feb";
     case 2:
-      return "mar";
+      return "Mar";
     case 3:
-      return "apr";
+      return "Apr";
     case 4:
-      return "may";
+      return "May";
     case 5:
-      return "jun";
+      return "Jun";
     case 6:
-      return "jul";
+      return "Jul";
     case 7:
-      return "aug";
+      return "Aug";
     case 8:
-      return "sep";
+      return "Sep";
     case 9:
-      return "oct";
+      return "Oct";
     case 10:
-      return "nov";
+      return "Nov";
     case 11:
-      return "dec";
+      return "Dec";
     default:
       return "invalid month";
   }

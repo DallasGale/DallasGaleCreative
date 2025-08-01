@@ -84,21 +84,9 @@ a:not(.cta, .link) {
 .avatar {
   width: 110px;
   height: 110px;
-  float: right;
+  /* float: right; */
 }
 
-.logo {
-  font-family: var(--default-font);
-  padding: 10px;
-  border: 1px solid var(--site-text-color);;
-  display: inline-flex;
-  max-width: 90px;
-  width: auto;
-  font-size: 14px;
-  float: left;
-  position: absolute;
-  top: 136px;
-}
 
 .ctas {
   margin-top: 80px;
@@ -128,26 +116,16 @@ a:not(.cta, .link) {
   text-decoration: none;
 }
 
-
-
 @media (min-width: 780px) {
   :root {
     --paragraph-size: 24px;
   }
   main {
-    margin-top: 5vh;
+    margin-top: 200px;
     display: grid;
     gap: 42px;
     grid-template-columns: 244px 1fr;
   }
-  /* nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-  } */
 
   .avatar {
     width: 224px;
@@ -155,15 +133,7 @@ a:not(.cta, .link) {
     float: none;
   }
 
-  .logo {
-    position: relative;
-    top: auto;
-    transition: var(--transition);
-    font-size: 16px;
-  }
-  .logo:hover {
-    box-shadow: -5px 6px 0px 0px var(--hover-shadow);
-  }
+ 
 }
 
 
