@@ -72,13 +72,13 @@ async function runTests() {
 
   describe("parseDay() returns human-readable day", () => {
     it("returns monday", () => {
-      assert.strictEqual(parseDay(1), "monday");
+      assert.strictEqual(parseDay(1), "Monday");
     });
     it("returns thursday", () => {
-      assert.strictEqual(parseDay(4), "thursday");
+      assert.strictEqual(parseDay(4), "Thursday");
     });
     it("returns sunday", () => {
-      assert.strictEqual(parseDay(0), "sunday");
+      assert.strictEqual(parseDay(0), "Sunday");
     });
     it("returns invalid day", () => {
       assert.strictEqual(parseDay(7), "invalid day");
