@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dallas Gale Creative / Stories | Web Developer & UI Designer</title>
+  <meta name="description"
+    content="Experienced frontend developer and digital designer based in Melbourne, Australia.. Over a decade of expertise in web development for agencies and startups across Australia, LA, and NYC. View my portfolio and contact me for custom web solutions." />
+  <meta name="keywords"
+    content="HTML, CSS, JavaScript, React.js, Frontend development, react developer, web design, web developer, web development, responsive web design, custom website development, Yarra Valley web design, Melbourne web developer,  Victorian web design, Australian web design, freelance web developer, freelance web designer,independent web consultant, small business web design, small business web developer, startup web solutions, local business websites, custom React.js development for small businesses, custom web development for small businesses, custom frontend development for small businesses, custom web design for small businesses, hire freelance web developer Yarra Valley, hire freelance web designer Yarra Valley, hire freelance web developer Melbourne, hire freelance web designer Melbourne, hire freelance web developer Australia, hire freelance web designer Australia, portfolio sites for creatives, brochure sites for small business, fast turnaround web design, bespoke web design, hand-crafted web design, fast turnaround web development, affordable custom websites, progressive web app developer, JAMstack websites" />
+  <meta name="author" content="Dallas Gale" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <!-- <link rel="stylesheet" href="../src/css/styles.css" /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./quick-list/styles.css" />
+
+  <style>
+    :root,
+    :host {
+      --bg-color: #F1F3FD;
+    }
+
+    body {
+      background-color: var(--bg-color);
+
+    }
+
+    body.dark {
+      --bg-color: #454751;
+    }
+
+    #tasks {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;;
+    }
+
+    footer {
+      height: 300px;
+      background: rgb(0, 0, 0);
+    }
+
+    main {
+      max-width: 1200px;
+      margin-inline: auto;
+      ;
+    }
+
+    /* #form {
+        visibility: hidden;
+        position: absolute;
+      } */
+  </style>
+</head>
+
+<body class="dark">
+  <main>
+    <button id="toggle-mode">Toggle Mode</button>
+
+    <!-- Required -->
+    <form id="form" class="qwk-form">
+
+      <label for="name">
+        Name
+        <input class="my-input" data-qwk-input-label="Name" type="text" id="name" value="Dallas" name="name"
+          placeholder="" />
+      </label>
+      <label for="occupation">
+        Occupation
+        <input class="my-input" data-qwk-input-label="Occupation" type="text" id="occupation"
+          value="Web developer" name="occupation" placeholder="" />
+      </label>
+      <label for="occupation">
+        Biography
+        <textarea class="my-input" data-qwk-input-label="Bio" type="text" id="bio" value="" name="bio"
+          placeholder="">Sample paragraph</textarea>
+      </label>
+      <label for="work">
+        Work Type
+        <select class="my-input" data-qwk-input-label="Work" type="text" id="freelance" value="Freelance"
+          name="work" placeholder="">
+          <optgroup>
+            <option selected>Freelance</option>
+            <option>Contract</option>
+            <option>Hired</option>
+          </optgroup>
+        </select>
+      </label>
+      <label for="relationship">
+        Relationship
+        <input class="my-input" data-qwk-input-label="Relationship" type="text" id="relationship" value="Married"
+          name="relationship" placeholder="" />
+      </label>
+      <label for="importance">
+        Importance
+        <input class="my-input" data-qwk-input-label="Importance" type="number" value="4" id="importance"
+          name="importance" min="0" max="10" placeholder="Task importance" />
+      </label>
+      <label for="importance">
+        Due date
+        <input class="my-input" data-qwk-input-label="Due date" type="date" value="2018-07-22" id="date" name="dueDate"
+          min="0" max="10" placeholder="Task importance" />
+      </label>
+      <div>
+        <button type="submit">Add A Task</button>
+      </div>
+    </form>
+
+
+    <!-- Required element  -->
+    <div id="container" class="qwk-container">
+      <!-- Contains the list of items  -->
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>
