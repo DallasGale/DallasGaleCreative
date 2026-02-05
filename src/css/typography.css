@@ -13,12 +13,13 @@
   font-size: var(--paragraph-size);
 }
 
-.paragraph a {
+.paragraph-link {
   font-family: var(--special-font-bold);
+  color: var(--paragraph-link-color);
 }
 
 .text-weight-600 {
-  font-weight: 400;;
+  font-weight: 400;
 }
 
 .text-color-grey-01 {

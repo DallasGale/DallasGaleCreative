@@ -1,5 +1,5 @@
 function formatHour(hour) {
-  if (hour >= 1 && hour <= 12) return hour
+  if (hour >= 1 && hour <= 12) return hour;
   else {
     switch (hour) {
       case 0:
