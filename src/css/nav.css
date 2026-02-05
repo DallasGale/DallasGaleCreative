@@ -1,7 +1,0 @@
-.nav-icon {
-  width: 24px;
-  height: 24px;
-   svg, g {
-      fill: var(--svg-icon-fill);
-    }
-}
