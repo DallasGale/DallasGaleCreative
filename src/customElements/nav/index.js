@@ -58,16 +58,6 @@ class CustomNav extends HTMLElement {
             hello[at]dallasgale.com
           </a>
         </div>
-        <!-- <div>
-          <a class="link" href="/stories/">
-            stories
-          </a>
-        </div>
-        <div>
-          <a class="link" href="/projects/">
-            projects
-          </a>
-        </div> -->
         <div>
           <a class="link nav-icon" href="https://github.com/dallasgale" 
             id="github" style="width: 24px; height: 24px;" 

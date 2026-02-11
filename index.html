@@ -15,34 +15,32 @@
   <link rel="stylesheet" href="./src/css/styles.css" />
 </head>
 
-<body>
+<body class="evening">
   <custom-header></custom-header>
   <main>
-    <div>
-      <img class="avatar" src="./src/images/avatar.png" alt="Dallas Gale" width="224" height="224" />
+    <div class="avatar" id="intro-avatar">
+      <img class="" src="./src/images/avatar.png" alt="Dallas Gale" width="224" height="224" />
     </div>
-    <div>
+    <div id="intro-blurb">
       <p class="paragraph">
-        Hey, I'm Dallas Gale, a web developer and UI designer from Melbourne,
-        Australia.
-      </p>
+        Hey, I'm Dallas Gale, a web developer from Melbourne,
+        Australia. I've been developing websites since 2011 for
+        startups, large organisations and ad agencies across <i>Melbourne</i>, <i>Los Angeles</i> and <i>New York
+          City</i> - including
+        <a class="paragraph-link" href="https://www.hia.ai" target="_blank" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'HIA_link'
+            });">HIA Talk</a>,
+        Big Mirror Labs,
 
-      <p class="paragraph">
-        Since 2011, I've been creating websites for startups, large
-        organisations and
-        agencies including
         <a class="paragraph-link" href="https://www.abc.net.au/news" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'ABC_link'
             });">ABC</a>,
-
-        <a class="paragraph-link" href="https://www.acer.org/au/" target="_blank" onclick="gtag('event', 'click', {
-              event_category: 'outbound',
-              event_label: 'ACER_link'});">ACER</a>,
         <a class="paragraph-link" href="https://www.dentsu.com/au/en" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'ISOBAR_link'
-            });">Isobar (Dentsu)</a>,
+            });">Isobar</a>,
         <a class="paragraph-link" href="https://dijgtal.com/" target="_blank" onclick="gtag('event', 'click', {
             event_category: 'outbound',
             event_label: 'DIJGTAL_link'
@@ -58,36 +56,75 @@
         <a class="paragraph-link" href="https://hardhat.com.au/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'HARDHAT_link'
-            });">Hardhat</a>
+            });">Hardhat</a>,
         &amp;
         <a class="paragraph-link" href="https://thinkerbell.com/" target="_blank" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'THINKERBELL_link'
-            });">Thinkerbell</a>. I specialise in creating pixel-perfect responsive, accessible and performant web
-        projects.
+            });">Thinkerbell</a>.
       </p>
 
-      <div class="ctas">
-        <a href="./src/downloads/CV_Folio.pdf" class="cta">Download Folio</a>
-        <a href="mailto:hello@dallasgale.com" class="cta" onclick="gtag('event', 'click', {
-              event_category: 'outbound',
-              event_label: 'CONTACT_ME_link'
-            });">Contact Me</a>
-      </div>
+      <p class="paragraph">
+        I specialise in creating pixel-perfect responsive,
+        accessible and performant web
+        projects.</p>
 
-      <p class="text-small">
-        things i like:
-        <strong>html / css / javascript / typescript / storybook / react / svelte /
-          ruby / rails / express / sanity.io / designing with code</strong>
-      </p>
-      <p class="text-small">
-        &copy; 2025 Dallas Gale Creative | ABN 26 985 063 007
-      </p>
+
+
     </div>
+
+
+    <!-- Recent Work -->
+    <h2 class="section-title">Recent Work.</h2>
+    <div></div>
+
+    <div>
+      <img src="/src/images/projects/2026/dijgital/dijgtal_logo.jpeg" alt="Dijgtal logo" class="recent-work-logo" />
+      <h3><a class="employer" href="https://dijgtal.com/">DIJGTAL</a></h3>
+      <p>October 2025 to January 2026<br />(Contractor)</p>
+
+      <p>
+        <a href="https://lindemh.com.au/">Linde Material Handling</a><br /><br />
+        <a href="https://baoliforklifts.com.au/">Baoli Forklifts</a>
+      </p>
+      <br />
+      <p>Linde MH and Baoli Forklifts (same ownership) needed their websites replatformed from Sitecore to
+        Next.js/React. We had a hard deadline of early February '26, so during the planning stage, we decided on a
+        monorepo approach, which allowed us to build two websites from a single design system. All shared components and
+        modules were built with <a href="https://storybook.js.org/">Storybook</a>, with the only difference between
+        sites being the brand styling. We used
+        Vanilla Extract CSS to enable variant-based styles, allowing us to handle both brand variations from a single
+        stylesheet.
+      </p>
+      <p>For the CMS, we used <a href="https://www.sanity.io">Sanity.io</a>, leveraging the customisability of its
+        structure/schema system to build a
+        complete bespoke CMS solution.</p>
+      <p>Each component/module contained its own Sanity schema and query fragment, which fed into our page builder,
+        allowing the client to create unique pages.</p>
+
+    </div>
+    <section class="section-recent-work">
+      <div class="recent-work-grid">
+        <article class="recent-work">
+          <a href="https://lindemh.com.au/" class="link">
+            <img src=" /src/images/projects/2026/dijgital/linde.png"
+              alt="Screenshot of Linde Material Handling website on macbook and mobile devices" style="width: 100%" />
+          </a>
+        </article>
+        <article class="recent-work">
+          <a href="https://baoliforklifts.com.au/" class="link">
+            <img src="/src/images/projects/2026/dijgital/baoli.png"
+              alt="Screenshot of Baoli Forklifts website on macbook and mobile devices" style="width: 100%" />
+          </a>
+
+        </article>
+      </div>
+    </section>
   </main>
+  <custom-footer></custom-footer>
 
   <!-- Javascript -->
-  <!-- <script type="module" src="./src/js/ui/header.js"></script> -->
+  <script type="module" src="./src/customElements/footer/index.js"></script>
   <script type="module" src="./src/customElements/header/index.js"></script>
   <script type="module" src="./src/customElements/nav/index.js"></script>
 
