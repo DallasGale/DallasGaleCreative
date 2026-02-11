@@ -1,6 +1,9 @@
-.section-recent-work {
+.recent-work-section {
+  margin-top: var(--space-100);
+  margin-bottom: var(--space-20);
+}
+.recent-work-examples {
   display: flex;
-  align-items: baseline;
   justify-content: center;
   height: 100%;
   flex-direction: column;
@@ -27,6 +30,10 @@
 }
 
 @media (min-width: 780px) {
+  .recent-work-section {
+    margin-top: var(--space-300);
+    margin-bottom: var(--space-100);
+  }
   .recent-work img {
     filter: grayscale(1);
     transition: var(--transition);

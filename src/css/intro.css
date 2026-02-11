@@ -1,3 +1,14 @@
+.avatar {
+  display: none;
+  width: var(--space-80);
+  height: var(--space-80);
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+}
+
 #intro-avatar,
 #intro-blurb {
   opacity: 1;
@@ -23,6 +34,7 @@
   p {
     font-family: var(--default-font);
     line-height: 1.7;
+
     a::before {
       height: var(--space-14);
       top: var(--space-2);
@@ -32,18 +44,30 @@
 
 /* Above Tablet */
 @media (min-width: 780px) {
+  .avatar {
+    position: relative;
+    width: var(--space-200);
+    height: auto;
+    text-align: right;
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   .intro-section {
     margin-top: var(--space-200);
   }
 
   #intro-avatar {
-    transform: translateY(0) translateX(0) scale(1);
+    transform: translateY(8px) translateX(0) scale(1);
   }
 
   #intro-blurb {
     p {
+      font-size: var(--space-20);
       a::before {
-        height: var(--space-24);
+        height: var(--space-20);
       }
     }
   }
@@ -52,6 +76,6 @@
 /* Above Desktop */
 @media (min-width: 1080px) {
   #intro-avatar {
-    transform: translateY(0) translateX(140px) scale(1);
+    transform: translateY(8px) translateX(140px) scale(1);
   }
 }
