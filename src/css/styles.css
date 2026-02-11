@@ -284,17 +284,6 @@ a:not(.cta, .link, .employer) {
   }
 }
 
-.avatar {
-  display: none;
-  width: var(--space-80);
-  height: var(--space-80);
-  position: relative;
-}
-
-.avatar img {
-  width: 100%;
-}
-
 .two-col-grid-layout {
   display: block;
 }
@@ -311,18 +300,6 @@ a:not(.cta, .link, .employer) {
     display: grid;
     gap: var(--space-60);
     grid-template-columns: 1fr 2fr;
-  }
-
-  .avatar {
-    position: relative;
-    width: var(--space-200);
-    height: auto;
-    text-align: right;
-    display: block;
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 }
 

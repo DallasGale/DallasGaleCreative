@@ -28,18 +28,33 @@
 }
 
 .section-title {
+  display: inline-block;
   position: relative;
+  width: auto;
   font-size: var(--space-30);
   color: var(--color-white);
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  width: var(--space-50);
-  height: 1px;
-  background-color: var(--color-white);
-  left: -30px;
-  bottom: 0;
-  opacity: 0.8;
+.section-title {
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100dvh;
+    transform: translateX(-100%);
+    left: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    bottom: 0;
+    opacity: 0.8;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    bottom: 0;
+    opacity: 0.8;
+  }
 }

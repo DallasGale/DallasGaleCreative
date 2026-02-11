@@ -53,7 +53,7 @@
 
 .cta {
   font-family: var(--default-font);
-  font-size: 16px;
+  font-size: var(--space-14);
   background-color: var(--cta-bg-color);
   color: var(--cta-color);
   padding: 10px;

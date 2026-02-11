@@ -40,7 +40,7 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: var(--space-6);
 }
 
 .date-content {
@@ -57,14 +57,14 @@
 
 .logo {
   font-family: var(--default-font);
-  padding: 10px;
+  padding: var(--space-10);
   border: 1px solid var(--site-text-color);
   display: inline-flex;
-  max-width: 90px;
+  max-width: var(--space-90);
   width: auto;
-  font-size: 14px;
+  font-size: var(--space-14);
   float: left;
-  top: 136px;
+  top: 0;
 }
 
 .logo a {
@@ -89,9 +89,9 @@ p {
     position: relative;
     top: auto;
     transition: var(--transition);
-    font-size: 16px;
+    transform-origin: left;
     &.scrolled {
-      transform: scale(0.7);
+      /* transform: scale(0.7); */
     }
   }
   .logo:hover {
