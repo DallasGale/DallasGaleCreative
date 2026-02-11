@@ -1,0 +1,21 @@
+.recent-work-logo {
+  max-height: 80px;
+  max-width: 200px;
+}
+
+.recent-work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-70);
+}
+
+.recent-work img {
+  filter: grayscale(1);
+  transition: var(--transition);
+  transform: scale(0.98);
+  &:hover {
+    transition: var(--transition);
+    filter: grayscale(0);
+    transform: scale(1);
+  }
+}

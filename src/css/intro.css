@@ -1,0 +1,11 @@
+#intro-avatar,
+#intro-blurb {
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--transition-slower);
+  &.hide-intro {
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: var(--transition-slow);
+  }
+}

@@ -7,119 +7,25 @@ import meridiemIndicator from "./helpers/meridiemIndicator.mjs";
 import parseDay from "./helpers/parseDay.mjs";
 import diurnalPeriods from "./helpers/diurnalPeriods.mjs";
 
+// CSS
+import styles from "./styles.css" with { type: "css" };
+
 // Utility Functions
 import displayIcon from "./utils/displayIcon.mjs";
 
-// Create a class for the element
 class CustomHeader extends HTMLElement {
+  scrolledHeader = false;
   // static hasAnimated = false;
   constructor() {
     super();
-    this.testClass = "";
-    this.instanceId = Math.random().toString(36);
     this.attachShadow({ mode: "open" });
-  };
+    this.shadowRoot.adoptedStyleSheets = [styles];
+  }
 
   // Render Method
   render() {
     // Dom Element Creation
     this.shadowRoot.innerHTML = `
-      <style>
-        .header {
-          height: auto;
-          width: 100%;
-          box-sizing: border-box;
-          padding: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          // position: fixed;
-          z-index: 2;
-          top: 0;
-          flex-direction: column;
-        }
-
-        .header-col {
-          gap: 20px;
-          display: flex;
-        }
-
-        .header-content {
-          align-items: flex-start;
-          display: flex;
-          flex-direction: column;
-          padding-top: 12px;
-        }
-
-        .date-content {
-          // opacity: 0;
-          padding: 4px 0;
-        }
-
-        .icon {
-          // opacity: 0;
-          width: 24px;
-          height: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .logo {
-          font-family: var(--default-font);
-          padding: 10px;
-          border: 1px solid var(--site-text-color);
-          display: inline-flex;
-          max-width: 90px;
-          width: auto;
-          font-size: 14px;
-          float: left;
-          top: 136px;
-        }
-        
-        .logo a {
-          text-decoration: none;
-          color: var(--site-text-color);
-        }
-
-        p {
-          font-family: var(--default-font);
-          font-size: 14px;
-          line-height: 1.4;
-          font-weight: 400;
-          margin-top: 0;
-          margin-bottom: 0;
-          strong {
-            font-family: var(--default-font-bold);
-          }
-        }
-        
-        @media (min-width: 780px) {
-         .logo {
-            position: relative;
-            top: auto;
-            transition: var(--transition);
-            font-size: 16px;
-          }
-          .logo:hover {
-            box-shadow: -5px 6px 0px 0px var(--hover-shadow);
-          }
-
-          .header {
-            align-items: center;
-            flex-direction: row;
-            position: fixed;
-          }
-
-          .header-content {
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-            padding-top: 0;
-          }
-        }
-      </style>
-
       <header class="header">
         <div class="header-col">
           <div>
@@ -138,26 +44,34 @@ class CustomHeader extends HTMLElement {
             </p>
           </div>
         </div>
-        <custom-nav></custom-nav>
       </header>
     `;
-  };
+  }
+
+  // Header scrolled state
+  listenForScroll() {
+    const header = this.shadowRoot.querySelector(".header");
+    const introAvatar = document.querySelector("#intro-avatar");
+    const introBlurb = document.querySelector("#intro-blurb");
+    const logo = this.shadowRoot.querySelector(".logo");
+
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(() => {
+        const isPastThreshold = window.scrollY > 100;
+        header.classList.toggle("scrolled", isPastThreshold);
+        logo.classList.toggle("scrolled", isPastThreshold);
+        introAvatar.classList.toggle("hide-intro", isPastThreshold);
+        introBlurb.classList.toggle("hide-intro", isPastThreshold);
+      });
+    });
+  }
 
   connectedCallback() {
-    console.log("Custom element added to page.");
-    const wasReloaded = performance.getEntriesByType("navigation")[0].type === "reload";
-
-    if (wasReloaded) {
-      sessionStorage.removeItem("component-animated");
-    }
-
-    // DOM Stuff
     this.render();
-
-    const hasAnimated = sessionStorage.getItem("component-animated") === "true";
+    this.listenForScroll();
+    // const body = document.querySelector("body");
 
     // Date Logic
-    const body = document.querySelector("body");
     const welcomeMSG = this.shadowRoot.querySelector("#header-welcome-msg");
     const timeElement = this.shadowRoot.querySelector("#header-time");
     const dateElement = this.shadowRoot.querySelector("#header-date");
@@ -174,14 +88,13 @@ class CustomHeader extends HTMLElement {
       const year = date.getFullYear();
 
       // Theme Mode
-      body.classList.add(diurnalPeriods(hour));
+      // body.classList.add(diurnalPeriods(hour));
 
       // DOM Modification
       dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)} ${formatMonth(month)}, ${year}`;
       iconElement.innerHTML = displayIcon(daySegments);
       welcomeMSG.textContent = daySegments;
-      timeElement.textContent
-        = `${formatHour(hour)}:${formatMin(mins)} ${meridiemIndicator(hour)}`;
+      timeElement.textContent = `${formatHour(hour)}:${formatMin(mins)} ${meridiemIndicator(hour)}`;
     }
 
     function setDate() {
@@ -192,13 +105,7 @@ class CustomHeader extends HTMLElement {
     }
 
     setDate();
-
-    setTimeout(() => {
-      if (!hasAnimated) {
-        sessionStorage.setItem("component-animated", "true");
-      }
-    }, 1000);
-  };
+  }
 
   connectedMoveCallback() {
     console.log("Custom element moved with moveBefore()");
