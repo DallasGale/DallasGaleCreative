@@ -9,3 +9,9 @@
     transition: var(--transition-slow);
   }
 }
+
+#intro-blurb {
+  .paragraph {
+    font-family: var(--default-font);
+  }
+}
