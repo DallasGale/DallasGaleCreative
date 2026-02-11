@@ -216,6 +216,9 @@ main {
   margin-top: var(--space-100);
 }
 
+.content-section {
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -287,35 +290,31 @@ a:not(.cta, .link, .employer) {
   height: var(--space-80);
   position: relative;
 }
-/* .avatar::after {
-  content: "";
-  background-color: var(--color-black);
-  height: 10px;
-  width: 10px;
-  border-radius: 10px;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  margin-inline: auto;
-  right: 0;
-} */
 
 .avatar img {
   width: 100%;
+}
+
+.two-col-grid-layout {
+  display: block;
 }
 
 @media (min-width: 780px) {
   :root {
     --paragraph-size: 24px;
   }
-  main {
-    margin-top: var(--space-200);
+  .content-section {
+    margin-bottom: var(--space-100);
+  }
+
+  .two-col-grid-layout {
     display: grid;
     gap: var(--space-60);
     grid-template-columns: 1fr 2fr;
   }
 
   .avatar {
+    position: relative;
     width: var(--space-200);
     height: auto;
     text-align: right;
