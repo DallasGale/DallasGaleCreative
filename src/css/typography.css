@@ -10,13 +10,12 @@
 
 .paragraph {
   margin-top: 0;
-  /* font-family: var(--special-font); */
   font-family: var(--default-font);
   font-size: var(--paragraph-size);
 }
 
 .paragraph-link {
-  font-family: var(--special-font-bold);
+  font-family: var(--default-font-bold);
   color: var(--paragraph-link-color);
 }
 

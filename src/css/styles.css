@@ -7,36 +7,35 @@
 @import "./intro.css";
 
 :root {
+  /* Colors */
   --color-white: #ffffff;
   --color-trans-white: rgba(255, 255, 255, 0.6);
   --color-trans-black: rgba(19, 19, 19, 0.6);
   --color-black: #000000;
 
-  /* --site-bg: var(--color-white); */
-  /* --site-text-color: black; */
+  /* Element Colors */
   --highlight: aquamarine;
-  /* --cta-bg-color: var(--color-black); */
-  /* --cta-bg-hover-color: var(--color-white); */
-  /* --cta-text-hover-color: var(--color-black); */
-  /* --cta-border-hover-color: var(--color-black); */
   --cta-color: var(--color-white);
   --header-bg: var(--color-trans-white);
+
+  /* Fonts */
+  --default-font: "BeVietnam-Reg", Arial, Helvetica, sans-serif;
+  --default-font-thin: "BeVietnam-Thin", Arial, Helvetica, sans-serif;
+  --default-font-semi: "BeVietnam-SemiBold", Arial, Helvetica, sans-serif;
+  --default-font-bold: "BeVietnam-Bold", Arial, Helvetica, sans-serif;
+  --special-font: "Vollkorn", "Times New Roman", Times, serif;
+  --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
 
   --hover-shadow: var(--color-black);
   --paragraph-link-color: var(--color-black);
   --nav-font-size: 14px;
   --paragraph-size: 18px;
-  --default-font: "HelveticaNeue-Med", Arial, Helvetica, sans-serif;
-  --default-font-bold: "HelveticaNeue-Bold", Arial, Helvetica, sans-serif;
-  --special-font: "Vollkorn", "Times New Roman", Times, serif;
-  --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
   --svg-icon-fill: var(--color-black);
 
   --scrolled-header-line-bg: var(--color-black);
 
   --site-bg: rgb(19, 19, 19);
   --site-text-color: white;
-  /* --highlight: #42ad71; */
   --cta-bg-color: white;
   --cta-color: black;
   --cta-border-hover-color: white;
@@ -224,6 +223,7 @@ a {
   color: var(--site-text-color);
   position: relative;
   cursor: pointer;
+  font-family: var(--default-font-semi);
   &:hover {
     /* text-decoration-line: underline; */
     /* text-decoration-thickness: 2px; */
