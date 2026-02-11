@@ -60,6 +60,7 @@
   font-weight: 600;
   transition: var(--transition);
   border: 1px solid var(--cta-border-hover-color);
+  text-decoration: none;
 }
 
 .cta:hover {
