@@ -29,13 +29,17 @@
   gap: var(--space-10);
 }
 
+.recent-work-project {
+  margin-bottom: var(--space-100);
+}
+
 @media (min-width: 780px) {
   .recent-work-section {
     margin-top: var(--space-300);
     margin-bottom: var(--space-100);
   }
   .recent-work img {
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
     transition: var(--transition);
     transform: scale(0.98);
     &:hover {

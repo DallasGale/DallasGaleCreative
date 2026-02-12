@@ -52,12 +52,7 @@ class CustomNav extends HTMLElement {
         }
       </style>
 
-      <nav class="nav">
-        <div>
-          <a class="link" href="mailto:hello@dallasgale.com">
-            hello[at]dallasgale.com
-          </a>
-        </div>
+      <nav class="nav"> 
         <div>
           <a class="link nav-icon" href="https://github.com/dallasgale" 
             id="github" style="width: 24px; height: 24px;" 
