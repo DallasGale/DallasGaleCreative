@@ -82,8 +82,8 @@
         font-size: var(--space-20);
         &:hover {
           color: var(--color-white);
+          background-color: var(--color-black);
           /* &:before {
-            background-color: var(--color-black);
           } */
         }
         /* &:before {
