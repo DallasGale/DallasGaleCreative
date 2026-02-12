@@ -7,11 +7,10 @@ import meridiemIndicator from "./helpers/meridiemIndicator.mjs";
 import parseDay from "./helpers/parseDay.mjs";
 import diurnalPeriods from "./helpers/diurnalPeriods.mjs";
 
-// CSS
-import styles from "./styles.css" with { type: "css" };
-
 // Utility Functions
 import displayIcon from "./utils/displayIcon.mjs";
+
+const cssUrl = new URL("./styles.css", import.meta.url).href;
 
 class CustomHeader extends HTMLElement {
   scrolledHeader = false;
@@ -19,13 +18,13 @@ class CustomHeader extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [styles];
   }
 
   // Render Method
   render() {
     // Dom Element Creation
     this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="${cssUrl}">
       <header class="header">
         <div class="header-col">
           <div>

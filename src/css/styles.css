@@ -208,7 +208,7 @@ body {
 }
 
 main {
-  max-width: 1030px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   padding: 20px;

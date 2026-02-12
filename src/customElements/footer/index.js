@@ -1,5 +1,4 @@
-// CSS
-import styles from "./styles.css" with { type: "css" };
+const cssUrl = new URL("./styles.css", import.meta.url).href;
 
 class CustomFooter extends HTMLElement {
   scrolledFooter = false;
@@ -7,13 +6,13 @@ class CustomFooter extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [styles];
   }
 
   // Render Method
   render() {
     // Dom Element Creation
     this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="${cssUrl}">
       <footer class="footer">
         <custom-nav></custom-nav>
 

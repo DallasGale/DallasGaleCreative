@@ -37,6 +37,10 @@
   .recent-work-section {
     margin-top: var(--space-300);
     margin-bottom: var(--space-100);
+    max-width: 1080px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline: auto;
   }
   .recent-work img {
     /* filter: grayscale(1); */
