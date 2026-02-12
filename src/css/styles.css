@@ -227,37 +227,21 @@ a {
   position: relative;
   cursor: pointer;
   font-family: var(--default-font-semi);
-  &:hover {
-    /* text-decoration-line: underline; */
-    /* text-decoration-thickness: 2px; */
-  }
 }
 
-a:not(.cta, .link, .employer) {
+a.link {
   text-decoration: none;
   color: var(--color-black);
-  margin-left: var(--space-6);
-  margin-right: var(--space-8);
-  &:before {
-    opacity: 1;
-    content: "";
-    position: absolute;
-    background-color: var(--highlight);
-    width: 100%;
-    left: -6px;
-    top: 0px;
-    height: calc(100% - 12px);
-    z-index: -1;
-    padding: 6px;
-    transition: var(--transition);
-    border-radius: 6px;
-  }
+  padding: var(--space-4);
+  background-color: var(--highlight);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+
   &:hover {
-    &:before {
-      opacity: 1;
-      background-color: aquamarine;
-      transition: var(--transition);
-    }
+    color: var(--color-white);
+    opacity: 1;
+    background-color: var(--color-trans-black);
+    transition: var(--transition);
   }
 }
 
