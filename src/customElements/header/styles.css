@@ -13,6 +13,8 @@
   position: fixed;
   left: 0;
   right: 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(var(--space-8));
   &:after {
     height: 1px;
     width: 0%;
@@ -98,6 +100,7 @@ p {
     height: var(--space-120);
     align-items: center;
     flex-direction: row;
+    background-color: transparent;
     &.scrolled {
       transition: var(--transition-slow);
       height: var(--space-80);
