@@ -90,9 +90,6 @@ p {
     top: auto;
     transition: var(--transition);
     transform-origin: left;
-    &.scrolled {
-      /* transform: scale(0.7); */
-    }
   }
   .logo:hover {
     box-shadow: -5px 6px 0px 0px var(--hover-shadow);
