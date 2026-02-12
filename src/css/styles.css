@@ -287,6 +287,41 @@ a.link {
   }
 }
 
+.video-mask {
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  justify-content: center;
+  z-index: -2;
+}
+.video-wrapper {
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  justify-content: center;
+  z-index: -3;
+  left: 0;
+  right: 0;
+}
+.video {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
 /* Theme Mode */
 /* body.evening {
   transition: var(--transition);
