@@ -75,14 +75,19 @@
 
   .intro-section {
     .paragraph {
-      line-height: 1.7;
+      line-height: 1.9;
       font-size: var(--space-20);
 
       .link {
+        transition: var(--transition-slow);
         font-size: var(--space-20);
         &:hover {
+          transition: var(--transition-slow);
           color: var(--color-white);
-          background-color: var(--color-black);
+          background-color: transparent;
+          box-shadow: 0 3px 0px 0px var(--hover-shadow);
+          z-index: 1;
+
           /* &:before {
           } */
         }
