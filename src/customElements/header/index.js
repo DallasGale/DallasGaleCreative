@@ -28,7 +28,7 @@ class CustomHeader extends HTMLElement {
       <header class="header">
         <div class="header-col">
           <div>
-            <h1 class="logo"><a href="/">Dallas Gale.</a></h1>
+            <div class="logo"><a href="/">Dallas Gale.</a></div>
           </div>
           <div class="header-content">
             <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">

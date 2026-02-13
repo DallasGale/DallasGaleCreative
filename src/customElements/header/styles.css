@@ -69,6 +69,7 @@
 }
 
 .logo a {
+  color: var(--color-white);
   text-decoration: none;
   color: var(--site-text-color);
 }
