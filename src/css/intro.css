@@ -6,10 +6,8 @@
   }
   .hero-text {
     font-size: clamp(var(--space-40), 17vw, var(--space-100));
-    /* font-size: var(--space-100); */
     line-height: 0.8;
     font-weight: 900;
-    /* font-family: var(--default-font-black); */
     margin-bottom: var(--space-20);
   }
 }
@@ -24,23 +22,6 @@
 .avatar img {
   width: 100%;
 }
-
-/* #intro-section {
-  .link {
-    font-weight: 900;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    background-color: var(--highlight);
-    font-family: var(--default-font-bold);
-    color: var(--paragraph-link-color);
-
-    &:hover {
-      opacity: 1;
-      background-color: aquamarine;
-      transition: var(--transition);
-    }
-  }
-} */
 
 #intro-avatar,
 #intro-blurb {
