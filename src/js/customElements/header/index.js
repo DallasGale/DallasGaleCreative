@@ -25,7 +25,7 @@ export class CustomHeader extends HTMLElement {
     // Dom Element Creation
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="${cssUrl}">
-      <header class="header">
+      <header class="header" style="opacity: 0">
         <div class="header-col">
           <div>
             <div class="logo"><a href="/">Dallas Gale.</a></div>

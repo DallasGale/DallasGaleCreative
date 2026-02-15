@@ -13,7 +13,7 @@ export class CustomFooter extends HTMLElement {
     // Dom Element Creation
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="${cssUrl}">
-      <footer class="footer">
+      <footer class="footer" style="opacity: 0;">
         <custom-nav></custom-nav>
 
       <div class="ctas">

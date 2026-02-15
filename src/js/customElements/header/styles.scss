@@ -1,4 +1,13 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
+  opacity: 0;
   transition: var(--transition-slow);
   height: auto;
   width: 100%;
@@ -15,6 +24,8 @@
   right: 0;
   background-color: var(--header-bg);
   backdrop-filter: blur(var(--space-8));
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
   &:after {
     height: 1px;
     width: 0%;
