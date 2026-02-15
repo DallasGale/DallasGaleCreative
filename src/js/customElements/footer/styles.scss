@@ -1,4 +1,13 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .footer {
+  opacity: 0;
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -15,18 +24,8 @@
   backdrop-filter: blur(3px);
   height: var(--space-120);
   transition: var(--transition-slow);
-  /* &:before {
-    height: 1px;
-    width: 0%;
-    background-color: var(--active-header-line-bg);
-    content: "";
-    position: absolute;
-    top: 0;
-    margin-inline: auto;
-    left: 0;
-    right: 0;
-    transition: var(--transition);
-  } */
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 @media (min-width: 780px) {

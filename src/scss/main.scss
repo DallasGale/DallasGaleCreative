@@ -212,7 +212,7 @@ main {
   flex-direction: column;
   padding: 20px;
   margin-inline: auto;
-  margin-top: var(--space-160);
+  // margin-top: var(--space-160);
 }
 
 .content-section {
@@ -277,7 +277,8 @@ a.link {
   }
 
   main {
-    margin-top: var(--space-100);
+    padding: 0;
+    // margin-top: var(--space-100);
   }
   .content-section {
     margin-bottom: var(--space-100);
