@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  svg,
+  g {
+    fill: var(--svg-icon-fill);
+  }
+}
+
+.link {
+  color: var(--site-text-color);
+  font-size: var(--nav-font-size);
+  font-family: var(--default-font-bold);
+  display: inline;
+  text-decoration: none;
+}
+
+@media (min-width: 780px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    gap: 20px;
+  }
+}
