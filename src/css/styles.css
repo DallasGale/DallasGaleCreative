@@ -19,12 +19,12 @@
   --header-bg: var(--color-trans-white);
 
   /* Fonts */
-  --default-font: "BeVietnam-Reg", Arial, Helvetica, sans-serif;
+  --default-font: "Helvetica", Arial, Helvetica, sans-serif;
+  /* --default-font: "BeVietnam-Reg", Arial, Helvetica, sans-serif;
   --default-font-thin: "BeVietnam-Thin", Arial, Helvetica, sans-serif;
   --default-font-semi: "BeVietnam-SemiBold", Arial, Helvetica, sans-serif;
   --default-font-bold: "BeVietnam-Bold", Arial, Helvetica, sans-serif;
-  --special-font: "Vollkorn", "Times New Roman", Times, serif;
-  --special-font-bold: "VollkornBold", "Times New Roman", Times, serif;
+  --default-font-black: "BeVietnam-Black", Arial, Helvetica, sans-serif; */
 
   --hover-shadow: var(--color-black);
   --paragraph-link-color: var(--color-black);
@@ -208,12 +208,12 @@ body {
 }
 
 main {
-  max-width: 1000px;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin-inline: auto;
-  margin-top: var(--space-100);
+  margin-top: var(--space-160);
 }
 
 .content-section {
@@ -231,22 +231,22 @@ a {
 
 a.link {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-white);
   padding: var(--space-4);
-  background-color: var(--highlight);
+  font-weight: bold;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  border: 1px solid var(--highlight);
 
   &:hover {
-    color: var(--color-white);
-    opacity: 1;
-    background-color: var(--color-trans-black);
+    color: var(--color-black);
+    background-color: var(--highlight);
     transition: var(--transition);
   }
 }
 
 .link {
-  font-size: var(--nav-font-size);
+  /* font-size: var(--nav-font-size); */
   font-family: var(--default-font-bold);
   display: inline;
 }
@@ -276,6 +276,10 @@ a.link {
   :root {
     --paragraph-size: 24px;
   }
+
+  main {
+    margin-top: var(--space-100);
+  }
   .content-section {
     margin-bottom: var(--space-100);
   }
@@ -288,7 +292,7 @@ a.link {
 }
 
 .video-mask {
-  /* backdrop-filter: blur(20px); */
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   display: flex;
@@ -314,7 +318,7 @@ a.link {
 .video {
   width: 100%;
   object-fit: cover;
-  opacity: 0.04;
+  opacity: 0.2;
   height: 100%;
   position: absolute;
   left: 0;

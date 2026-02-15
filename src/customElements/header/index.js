@@ -50,7 +50,7 @@ class CustomHeader extends HTMLElement {
   // Header scrolled state
   listenForScroll() {
     const header = this.shadowRoot.querySelector(".header");
-    const introAvatar = document.querySelector("#intro-avatar");
+    // const introAvatar = document.querySelector("#intro-avatar");
     const introBlurb = document.querySelector("#intro-blurb");
     const logo = this.shadowRoot.querySelector(".logo");
 
@@ -59,7 +59,7 @@ class CustomHeader extends HTMLElement {
         const isPastThreshold = window.scrollY > 100;
         header.classList.toggle("scrolled", isPastThreshold);
         logo.classList.toggle("scrolled", isPastThreshold);
-        introAvatar.classList.toggle("hide-intro", isPastThreshold);
+        // introAvatar.classList.toggle("hide-intro", isPastThreshold);
         introBlurb.classList.toggle("hide-intro", isPastThreshold);
       });
     });
