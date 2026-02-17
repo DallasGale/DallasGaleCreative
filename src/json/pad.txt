@@ -1,4 +1,3 @@
-Open Universities Australia required a new campaign page to promote their online study course programs. The landing page included an interactive course matching quiz that forwards the user to an existign OUA page with customised course pathways.  
+Penington Institute is an independent policy research non-profit committed to reducing serious drug harms. As a contracted developer, I built a quiz platform for their Regulate It campaign, an interactive experience designed to show Australians how their views on cannabis regulation compare with the broader population.
 
-The site needed to be built as static as possible (no react dom etc) since it was being hosted on an exisiting OUA system. I choose  AstroJS beacuse it is a static site buildr that also allows you to sprinkle in ReactJS components or any other framework to add extra interactivity. The parallax slider is SwiperJS and the quiz state is a ReactJS component.
-
+The platform was built with AstroJS/React on the front-end, with Google Firebase and Firestore db on the back-end to capture user postcodes on quiz completion and deliver personalised results. Users were encouraged to share their results on social media via a generated share URL, with Cloud Functions handling the dynamic creation of result images.

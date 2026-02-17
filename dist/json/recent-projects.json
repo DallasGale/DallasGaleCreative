@@ -193,14 +193,17 @@
     "summary": "Full-stack quiz micro-site.",
     "paragraphs": [
       {
-        "text": ""
+        "text": "Penington Institute is an independent policy research non-profit committed to reducing serious drug harms. As a contracted developer, I built a quiz platform for their Regulate It campaign, an interactive experience designed to show Australians how their views on cannabis regulation compare with the broader population."
+      },
+      {
+        "text": "The platform was built with <a target=\"_blank\" class=\"link\" href=\"https://astro.build/\">AstroJS</a>/<a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> on the front-end, with  <a target=\"_blank\" class=\"link\" href=\"https://firebase.google.com/\">Google Firebase/Firestore</a> db on the back-end to capture user postcodes on quiz completion and deliver personalised results. Users were encouraged to share their results on social media via a generated share URL, with Cloud Functions handling the dynamic creation of result images."
       }
     ],
     "links": [
       {
-        "label": "regulateit.com.au",
-        "url": "https://penington-cannabis-quiz.vercel.app/",
-        "archived": true
+        "label": "quiz.regulateit.com.au",
+        "url": "https://quiz.regulateit.com.au/",
+        "archived": false
       }
     ],
     "press": []
