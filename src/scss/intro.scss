@@ -1,3 +1,5 @@
+@use "./breakpoints.scss" as bp;
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -7,18 +9,57 @@
   }
 }
 #intro-section {
-  min-height: 100vh;
+  max-width: 1000px;
+  min-height: calc(100vh - var(--space-140));
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 140px;
+  padding-top: var(--space-140);
+  margin-inline: auto;
+  @include bp.respond-to(tablet-up) {
+    padding-top: 0;
+    align-items: center;
+  }
+}
+
+@keyframes colors {
+  0% {
+    color: red;
+  }
+
+  10% {
+    color: orange;
+  }
+  60% {
+    opacity: 0;
+    color: yellow;
+  }
+  70% {
+    opacity: 1;
+    color: yellowgreen;
+  }
+  90% {
+    opacity: 0;
+    color: green;
+  }
+  100% {
+    color: darkgreen;
+  }
 }
 #intro-blurb {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(0);
   transition: var(--transition-slower);
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 2s;
+  @include bp.respond-to(tablet-up) {
+    &.hide-intro {
+      // animation: colors 2s ease-in-out forwards;
+      transform: translateY(-10%);
+      opacity: 0.2;
+      // color: var(--color-med-grey);
+      // filter: blur(6px);
+      transition: var(--transition-slow);
+    }
+  }
   .paragraph {
     font-size: var(--space-18);
     font-family: var(--default-font-bold);
@@ -29,40 +70,5 @@
     line-height: 0.8;
     font-weight: 900;
     margin-bottom: var(--space-20);
-  }
-}
-
-/* Above Tablet */
-@media (min-width: 780px) {
-  #intro-blurb {
-    &.hide-intro {
-      transform: translateY(-10%);
-      opacity: 0;
-      transition: var(--transition-slow);
-    }
-  }
-
-  .avatar {
-    position: relative;
-    width: var(--space-200);
-    height: auto;
-    text-align: right;
-    display: block;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  #intro-section {
-    padding-top: 0;
-    align-items: center;
-    // padding-top: 20vh;
-  }
-}
-
-/* Above Desktop */
-@media (min-width: 1080px) {
-  #intro-avatar {
-    transform: translateY(8px) translateX(140px) scale(1);
   }
 }

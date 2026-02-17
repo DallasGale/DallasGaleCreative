@@ -1,1 +1,1 @@
-import"./customElements/nav/index.js";import"./customElements/header/index.js";import"./customElements/footer/index.js";
+import"./customElements/nav/index.js";import"./customElements/header/index.js";import"./customElements/footer/index.js";import e from"./recentProjects/index.js";e();

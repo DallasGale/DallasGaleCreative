@@ -28,6 +28,10 @@ const paths = {
     src: "src/js/**/*.{js,mjs}",
     dest: "dist/js/",
   },
+  json: {
+    src: "src/json/**/*.json",
+    dest: "dist/json/",
+  },
   componentAssets: {
     src: "src/js/customElements/**/*.scss",
     dest: "dist/js/customElements/",
@@ -35,6 +39,10 @@ const paths = {
   images: {
     src: "src/images/**/*.{jpg,jpeg,png,svg}",
     dest: "dist/images/",
+  },
+  icons: {
+    src: "src/icons/**/*.svg",
+    dest: "dist/icons/",
   },
   favicon: {
     src: "src/favicon/**/*",
@@ -75,6 +83,13 @@ export function scripts() {
     .pipe(browserSync.stream());
 }
 
+// Copy json to dist
+export function json() {
+  return src(paths.json.src, { encoding: false })
+    .pipe(dest(paths.json.dest))
+    .pipe(browserSync.stream());
+}
+
 // Compile component SCSS assets (used by web components via import.meta.url)
 export function componentAssets() {
   return src(paths.componentAssets.src, { base: "src/js/customElements/" })
@@ -98,6 +113,12 @@ export function images() {
     .pipe(dest(paths.images.dest))
     .pipe(browserSync.stream());
 }
+// Copy icons to dist
+export function icons() {
+  return src(paths.icons.src, { encoding: false })
+    .pipe(dest(paths.icons.dest))
+    .pipe(browserSync.stream());
+}
 
 // Dev Server
 export function serve() {
@@ -116,75 +137,19 @@ export function serve() {
   watch(paths.favicon.src, favicon);
 }
 
-// Build task
-// Add this function to your gulpfile
-async function logImageSizes() {
-  const { promises: fs } = await import("fs");
-  const path = await import("path");
-
-  const srcDir = "src/images";
-  const distDir = "dist/images";
-
-  const files = await fs.readdir(srcDir);
-  const pngFiles = files.filter((file) => file.endsWith(".png"));
-  const svgFiles = files.filter((file) => file.endsWith(".svg"));
-
-  console.log("PNG Optimization Report:");
-  console.log("------------------------");
-
-  for (const file of pngFiles) {
-    const srcPath = path.join(srcDir, file);
-    const distPath = path.join(distDir, file);
-
-    try {
-      const srcStat = await fs.stat(srcPath);
-      const distStat = await fs.stat(distPath);
-
-      const srcSize = srcStat.size;
-      const distSize = distStat.size;
-      const savings = (((srcSize - distSize) / srcSize) * 100).toFixed(2);
-
-      console.log(
-        `${file}: ${(srcSize / 1024).toFixed(2)}KB → ${(
-          distSize / 1024
-        ).toFixed(2)}KB (${savings}% saved)`,
-      );
-    } catch (err) {
-      console.log(`Error processing ${file}: ${err.message}`);
-    }
-  }
-
-  console.log("\nSVG Optimization Report:");
-  console.log("------------------------");
-
-  for (const file of svgFiles) {
-    const srcPath = path.join(srcDir, file);
-    const distPath = path.join(distDir, file);
-
-    try {
-      const srcStat = await fs.stat(srcPath);
-      const distStat = await fs.stat(distPath);
-
-      const srcSize = srcStat.size;
-      const distSize = distStat.size;
-      const savings = (((srcSize - distSize) / srcSize) * 100).toFixed(2);
-
-      console.log(
-        `${file}: ${(srcSize / 1024).toFixed(2)}KB → ${(
-          distSize / 1024
-        ).toFixed(2)}KB (${savings}% saved)`,
-      );
-    } catch (err) {
-      console.log(`Error processing ${file}: ${err.message}`);
-    }
-  }
-}
-
 // Add this to your build task
 export const build = series(
   clean,
-  parallel(html, styles, scripts, componentAssets, images, favicon),
-  logImageSizes,
+  parallel(
+    html,
+    styles,
+    scripts,
+    json,
+    componentAssets,
+    images,
+    favicon,
+    icons,
+  ),
 );
 
 // Default task

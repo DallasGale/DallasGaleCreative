@@ -1,0 +1,26 @@
+$breakpoint-short: 650px;
+$breakpoint-mobile: 400px;
+$breakpoint-long-mobile: 430px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+$breakpoint-widescreen: 1800px;
+
+/********************************************
+        MEDIA QUERIES
+********************************************/
+
+@mixin respond-to($media) {
+  @if $media == tablet-up {
+    @media only screen and (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $media == desktop-up {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $media == widescreen-up {
+    @media only screen and (min-width: $breakpoint-widescreen) {
+      @content;
+    }
+  }
+}
