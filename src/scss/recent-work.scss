@@ -18,13 +18,15 @@
 
 #recent-work {
   .recent-work-project {
-    filter: grayscale(1);
     transition: var(--transition-slow);
     box-sizing: border-box;
     padding: var(--space-26) 0;
 
     @include bp.respond-to(tablet-up) {
       padding: var(--space-26);
+    }
+    @include bp.respond-to(desktop-up) {
+      filter: grayscale(1);
     }
     &:hover {
       transition: var(--transition-slow);
