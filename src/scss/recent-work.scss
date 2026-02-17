@@ -17,6 +17,11 @@
 }
 
 #recent-work {
+  // .content {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: var(--space-12);
+  // }
   .recent-work-project {
     transition: var(--transition-slow);
     box-sizing: border-box;

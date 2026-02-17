@@ -34,7 +34,26 @@
 </head>
 
 <body class="evening">
-  <custom-header></custom-header>
+  <header id="header" class="header" style="opacity: 0">
+    <div class="header-col">
+      <div>
+        <div class="logo"><a href="/">Dallas Gale.</a></div>
+      </div>
+      <div class="header-content">
+        <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+          <p>
+            Good <span id="header-welcome-msg"></span>!
+          </p>
+          <div id="header-icon" class="icon"></div>
+        </div>
+        <p class="date-content">
+          <span class="u-capitalize text-color-grey-01" id="header-date"></span>
+          <span id="header-time" class="text-color-grey-01"></span>
+        </p>
+      </div>
+    </div>
+  </header>
+  <!-- <custom-header></custom-header> -->
   <main>
     <section id="intro-section">
       <!-- <div class="avatar" id="intro-avatar">
