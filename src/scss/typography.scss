@@ -1,3 +1,5 @@
+@use "./breakpoints.scss" as bp;
+
 .text-small {
   font-family: var(--default-font);
   font-size: 14px;
@@ -28,6 +30,10 @@
   width: auto;
   font-size: var(--space-30);
   color: var(--color-white);
+
+  @include bp.respond-to(tablet-up) {
+    padding-left: var(--space-20);
+  }
 }
 
 .section-title {

@@ -1,0 +1,2 @@
+.projects-grid-layout{display:grid;grid-template-columns:100%}@media only screen and (min-width:768px){.projects-grid-layout{grid-template-columns:50% 50%}}@media only screen and (min-width:1200px){.projects-grid-layout{grid-template-columns:33% 33% 33%}}@media only screen and (min-width:1800px){.projects-grid-layout{grid-template-columns:25% 25% 25% 25%}}
+/*# sourceMappingURL=layouts.css.map */

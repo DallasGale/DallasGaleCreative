@@ -1,0 +1,4 @@
+Open Universities Australia required a new campaign page to promote their online study course programs. The landing page included an interactive course matching quiz that forwards the user to an existign OUA page with customised course pathways.  
+
+The site needed to be built as static as possible (no react dom etc) since it was being hosted on an exisiting OUA system. I choose  AstroJS beacuse it is a static site buildr that also allows you to sprinkle in ReactJS components or any other framework to add extra interactivity. The parallax slider is SwiperJS and the quiz state is a ReactJS component.
+
