@@ -1,0 +1,1 @@
+function n(n){return n>=5&&n<12?"morning":n>=12&&n<18?"afternoon":"evening"}export default n;
