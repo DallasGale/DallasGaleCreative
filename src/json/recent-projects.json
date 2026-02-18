@@ -211,7 +211,7 @@
   {
     "id": 6,
     "employer": {
-      "name": "Caravan Cleaning Melourne",
+      "name": "Caravan Cleaning Melbourne",
       "url": "https://www.caravancleaningmelbourne.com.au"
     },
     "meta": {
@@ -229,7 +229,7 @@
     "summary": "Design & Build - Full-stack marketing site.",
     "paragraphs": [
       {
-        "text": "<a target=\"_blank\" class=\"link\" href=\"https://www.caravancleaningmelbourne.com.au/\">Caravan Cleaning Australia</a> is a family-run Melbourne business that approached me to overhaul their exisiting website. The site had become difficult to maintain and lacked responsiveness across smaller devices, with little consideration for accessibility."
+        "text": "<a target=\"_blank\" class=\"link\" href=\"https://www.caravancleaningmelbourne.com.au/\">Caravan Cleaning Melbourne</a> is a family-run Melbourne business that approached me to overhaul their exisiting website. The site had become difficult to maintain and lacked responsiveness across smaller devices, with little consideration for accessibility."
       },
       {
         "text": "I began  wireframing in <a target=\"_blank\" class=\"link\" href=\"https://www.figma.com/\">Figma</a>, shaping a more modern design focused on their core services and free quote enquiries. The redesign also introduced a before/after section to showcase the effectiveness of their cleaning work."
