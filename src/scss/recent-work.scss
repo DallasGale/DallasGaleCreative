@@ -51,9 +51,11 @@
   }
   .paragraph {
     color: var(--color-med-grey);
-    opacity: 0.6;
     font-size: var(--space-14);
     transition: var(--transition-slow);
+    @include bp.respond-to(desktop-up) {
+      opacity: 0.6;
+    }
   }
 
   .meta {
