@@ -10,21 +10,7 @@ import diurnalPeriods from "./helpers/diurnalPeriods.mjs";
 // Utility Functions
 import displayIcon from "./utils/displayIcon.mjs";
 
-const header = document.querySelector(".header");
-// const introAvatar = document.querySelector("#intro-avatar");
-const introBlurb = document.querySelector("#intro-blurb");
-const logo = document.querySelector(".logo");
-
 const Header = () => {
-  window.addEventListener("scroll", () => {
-    window.requestAnimationFrame(() => {
-      const isPastThreshold = window.scrollY > 100;
-      header.classList.toggle("scrolled", isPastThreshold);
-      logo.classList.toggle("scrolled", isPastThreshold);
-      // introAvatar.classList.toggle("hide-intro", isPastThreshold);
-      introBlurb.classList.toggle("hide-intro", isPastThreshold);
-    });
-  });
   const welcomeMSG = document.querySelector("#header-welcome-msg");
   const timeElement = document.querySelector("#header-time");
   const dateElement = document.querySelector("#header-date");
@@ -39,9 +25,6 @@ const Header = () => {
     const dayOfMonth = date.getDate();
     const mins = date.getMinutes();
     const year = date.getFullYear();
-
-    // Theme Mode
-    // body.classList.add(diurnalPeriods(hour));
 
     // DOM Modification
     dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)} ${formatMonth(month)}, ${year}`;

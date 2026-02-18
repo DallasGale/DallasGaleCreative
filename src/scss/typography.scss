@@ -28,6 +28,8 @@
   display: inline-block;
   position: relative;
   width: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: var(--space-30);
   color: var(--color-white);
 
@@ -37,25 +39,32 @@
 }
 
 .section-title {
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100dvh;
-    transform: translateX(-100%);
-    left: 0;
-    height: 1px;
-    background-color: var(--color-white);
-    bottom: 0;
-    opacity: 0.8;
+  &.highlight {
+    @include bp.respond-to(desktop-up) {
+      color: var(--color-highlight);
+    }
   }
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 1px;
-    background-color: var(--color-white);
-    bottom: 0;
-    opacity: 0.8;
+  &.underline {
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100dvh;
+      transform: translateX(-100%);
+      left: 0;
+      height: 1px;
+      background-color: var(--color-white);
+      bottom: 0;
+      opacity: 0.8;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 1px;
+      background-color: var(--color-white);
+      bottom: 0;
+      opacity: 0.8;
+    }
   }
 }

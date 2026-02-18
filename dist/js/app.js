@@ -1,1 +1,1 @@
-import"./customElements/nav/index.js";import"./customElements/header/index.js";import"./customElements/footer/index.js";import e from"./header/index.js";import t from"./recentProjects/index.js";e(),t();
+import"./customElements/nav/index.js";import"./customElements/header/index.js";import"./customElements/footer/index.js";import e from"./header/index.js";import o from"./scroll-event/index.js";import t from"./recentProjects/index.js";o(),e(),t();
