@@ -1,3 +1,7 @@
-Penington Institute is an independent policy research non-profit committed to reducing serious drug harms. As a contracted developer, I built a quiz platform for their Regulate It campaign, an interactive experience designed to show Australians how their views on cannabis regulation compare with the broader population.
+Caravan Cleaning Australia is a family-run Melbourne business that approached me to overhaul their exisiting website. The site had become difficult to maintain and lacked responsiveness across smaller devices, with little consideration for accessibility. 
 
-The platform was built with AstroJS/React on the front-end, with Google Firebase and Firestore db on the back-end to capture user postcodes on quiz completion and deliver personalised results. Users were encouraged to share their results on social media via a generated share URL, with Cloud Functions handling the dynamic creation of result images.
+I began with wireframes in Figma, shaping a more modern design focused on their core services and driving free quote enquiries. The redesign also introduced a before-and-after section to showcase the effectiveness of their cleaning work.
+
+Preserving their existing SEO rankings was a key concern heading into the relaunch, so a mobile-first approach with statically generated pages was a priority from the outset. The final build used AstroJS and React on the front-end, with Sanity.io powering the CMS for easy content management.
+
+Since launch, the business has maintained their #1 Google ranking and seen a strong increase in customer enquiries.

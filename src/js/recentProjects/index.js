@@ -47,7 +47,7 @@ const RecentProjects = () => {
     <div class="recent-work-project" key="${id}">
       <div class="employer-lockup">
         <img class="logo" src="${logo.path}" alt="${employer.name} logo" class="recent-work-logo" />
-        <h3><a target="_blank" class="employer" href="${employer.url}">${employer.name}</a></h3>
+        <h3 class="employer"><a target="_blank" href="${employer.url}">${employer.name}</a></h3>
       </div>
       <div class="content">
         <div class="meta">

@@ -64,7 +64,7 @@
     "summary": "AI Music Analysis Site.",
     "paragraphs": [
       {
-        "text": "MusiMap.ai is a platform that analyses audio/songs with the MusiTag AI backend. It is used to generate music tagging such as genres, moods, situations, and similar artists,which is mainly used by publishing houses. Audio can be uploaded as MP3s or via a shared URL from Spotify."
+        "text": "<a target=\"_blank\" class=\"link\"  href=\"https://app.dev.musimap.ai\">MusiMap</a> is a platform that analyses audio/songs with the MusiTag AI backend. It is used to generate music tagging such as genres, moods, situations, and similar artists,which is mainly used by publishing houses. Audio can be uploaded as MP3s or via a shared URL from Spotify."
       },
       {
         "text": "I was hired to build out <a target=\"_blank\" class=\"link\" href=\"https://app.dev.musimap.ai\">MusiMap.ai</a> using <a target=\"_blank\" class=\"link\" href=\"https://nextjs.org/\">Next.js</a>/<a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> with <a target=\"_blank\" class=\"link\" href=\"https://storybook.js.org/\">Storybook</a> and integrate the backend APIs."
@@ -106,13 +106,13 @@
     "summary": "Full-stack competition landing page.",
     "paragraphs": [
       {
-        "text": "<i>The Kayo Sports Call Up!</i> was a short two-page competition site to find the next <a target=\"_blank\" class=\"link\" href=\"https://www.foxsports.com.au/afl\">Fox Footy</a> on-air star who will feature on the new-look Super Saturday LIVE coverage in 2025. The competition required a user to submit their entry with a link to either a YouTube, Instagram, Facebook, or TikTok video of them displaying their commentary skills."
+        "text": "The <a target=\"_blank\" class=\"link\" href=\"https://kayosports.com.au/\">Kayo Sports</a> Call Up! was a short two-page competition site to find the next <a target=\"_blank\" class=\"link\" href=\"https://www.foxsports.com.au/afl\">Fox Footy</a> on-air star who will feature on the new-look Super Saturday LIVE coverage in 2025. The competition required a user to submit their entry with a link to either a YouTube, Instagram, Facebook, or TikTok video of them displaying their commentary skills."
       },
       {
         "text": "I built the front-end using <a target=\"_blank\" class=\"link\" href=\"https://astro.build/\">AstroJS</a>/<a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> with <a target=\"_blank\" class=\"link\" href=\"https://firebase.google.com/\">Google Firebase/Firestore</a> db on the back-end to support the competition entry submissions. The landing page included some hero animations using CSS transitions/animations."
       },
       {
-        "text": "<i>The Kayo Sports Call Up!</i> launched via a competition reveal video which aired during the AFL Draft coverage, featuring recently retired Richmond champion Dustin Martin and Fox Footy expert Jack Riewoldt."
+        "text": "<a target=\"_blank\" class=\"link\" href=\"https://kayosports.com.au/\">Kayo Sports</a> Call Up! launched via a competition reveal video which aired during the AFL Draft coverage, featuring recently retired Richmond champion Dustin Martin and Fox Footy expert Jack Riewoldt."
       },
       {
         "text": "During the short four-week promotion, <a target=\"_blank\" class=\"link\" href=\"https://kayosports.com.au/\">Kayo</a> received over 500 entries."
@@ -157,7 +157,7 @@
     "summary": "Online study campaign landing page.",
     "paragraphs": [
       {
-        "text": "Open Universities Australia required a new campaign landing page to promote their online study course programs. The landing page included an interactive course matching quiz that forwards the user to an existing OUA page with customised course pathways."
+        "text": "<a target=\"_blank\" class=\"link\"  href=\"https://www.open.edu.au/\">Open Universities Australia</a> required a new campaign landing page to promote their online study course programs. The landing page included an interactive course matching quiz that forwards the user to an existing OUA page with customised course pathways."
       },
       {
         "text": "The site needed to be built as static as possible (no React DOM etc.) since it was being hosted on an existing OUA system. I chose <a target=\"_blank\" class=\"link\" href=\"https://astro.build/\">AstroJS</a> because it is a static site builder that also allows you to sprinkle in <a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> components or any other framework to add extra interactivity. The parallax slider is <a target=\"_blank\" class=\"link\" href=\"http://swiperjs.com/\">SwiperJS</a> and the quiz state is a <a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> component."
@@ -193,7 +193,7 @@
     "summary": "Full-stack quiz micro-site.",
     "paragraphs": [
       {
-        "text": "Penington Institute is an independent policy research non-profit committed to reducing serious drug harms. As a contracted developer, I built a quiz platform for their Regulate It campaign, an interactive experience designed to show Australians how their views on cannabis regulation compare with the broader population."
+        "text": "<a target=\"_blank\" class=\"link\" href=\"https://www.penington.org.au/\">Penington Institute</a> is an independent policy research non-profit committed to reducing serious drug harms. As a contracted developer, I built a quiz platform for their Regulate It campaign, an interactive experience designed to show Australians how their views on cannabis regulation compare with the broader population."
       },
       {
         "text": "The platform was built with <a target=\"_blank\" class=\"link\" href=\"https://astro.build/\">AstroJS</a>/<a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> on the front-end, with  <a target=\"_blank\" class=\"link\" href=\"https://firebase.google.com/\">Google Firebase/Firestore</a> db on the back-end to capture user postcodes on quiz completion and deliver personalised results. Users were encouraged to share their results on social media via a generated share URL, with Cloud Functions handling the dynamic creation of result images."
@@ -203,6 +203,48 @@
       {
         "label": "quiz.regulateit.com.au",
         "url": "https://quiz.regulateit.com.au/",
+        "archived": false
+      }
+    ],
+    "press": []
+  },
+  {
+    "id": 6,
+    "employer": {
+      "name": "Caravan Cleaning Melourne",
+      "url": "https://www.caravancleaningmelbourne.com.au"
+    },
+    "meta": {
+      "date": "Aug '24 - Oct '24",
+      "jobType": "Freelance"
+    },
+    "logo": {
+      "path": "images/projects/2024/caravan-cleaning-melourne/logo.svg",
+      "alt": ""
+    },
+    "thumbnail": {
+      "path": "images/projects/2024/caravan-cleaning-melourne/thumbnail.jpg",
+      "alt": ""
+    },
+    "summary": "Design & Build - Full-stack marketing site.",
+    "paragraphs": [
+      {
+        "text": "<a target=\"_blank\" class=\"link\" href=\"https://www.caravancleaningmelbourne.com.au/\">Caravan Cleaning Australia</a> is a family-run Melbourne business that approached me to overhaul their exisiting website. The site had become difficult to maintain and lacked responsiveness across smaller devices, with little consideration for accessibility."
+      },
+      {
+        "text": "I began  wireframing in <a target=\"_blank\" class=\"link\" href=\"https://www.figma.com/\">Figma</a>, shaping a more modern design focused on their core services and free quote enquiries. The redesign also introduced a before/after section to showcase the effectiveness of their cleaning work."
+      },
+      {
+        "text": "Preserving their existing SEO rankings was a key concern heading into the relaunch, so a mobile-first approach with statically generated pages was a priority from the outset. The final build used <a target=\"_blank\" class=\"link\" href=\"https://astro.build/\">AstroJS</a>/<a target=\"_blank\" class=\"link\" href=\"https://react.dev/\">React</a> on the front-end, with <a target=\"_blank\" class=\"link\" href=\"https://www.sanity.io\">Sanity.io</a> powering the CMS for easy content management."
+      },
+      {
+        "text": "Since launch, the business has maintained their #1 Google ranking and seen a strong increase in customer enquiries."
+      }
+    ],
+    "links": [
+      {
+        "label": "caravancleaningmelbourne.com.au",
+        "url": "https://www.caravancleaningmelbourne.com.au/",
         "archived": false
       }
     ],
