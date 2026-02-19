@@ -68,7 +68,7 @@
     justify-content: space-between;
     flex-direction: column;
 
-    @include bp.respond-to(tablet-up) {
+    @include bp.respond-to(phone-up) {
       flex-direction: row;
     }
   }

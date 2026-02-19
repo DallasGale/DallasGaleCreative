@@ -1,1 +1,0 @@
-import n from"../icons/afternoon.mjs";import o from"../icons/evening.mjs";import r from"../icons/morning.mjs";function e(e){switch(e){case"morning":return r;case"afternoon":default:return n;case"evening":return o}}export default e;

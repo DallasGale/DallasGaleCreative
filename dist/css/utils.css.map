@@ -1,1 +1,0 @@
-{"version":3,"sources":["utils.scss"],"names":[],"mappings":"AAAA,MACE,iBAAA,QAEF,cACE,eAAA","file":"utils.css","sourcesContent":[":root {\n  --color-med-grey: #adadad;\n}\n.u-capitalize {\n  text-transform: capitalize;\n}\n"]}

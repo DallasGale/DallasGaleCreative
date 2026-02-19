@@ -5,6 +5,7 @@
 @use "./recent-work.scss";
 @use "./transitions.scss";
 @use "./header.scss";
+@use "./footer.scss";
 @use "./layouts.scss";
 @use "./breakpoints.scss" as bp;
 
@@ -207,6 +208,7 @@ body {
   color: var(--site-text-color);
   background-color: var(--site-bg);
   transition: var(--transition);
+  margin: 0;
 }
 
 main {

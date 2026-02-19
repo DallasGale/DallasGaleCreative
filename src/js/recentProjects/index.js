@@ -1,10 +1,7 @@
 /* eslint-disable @stylistic/arrow-parens */
-const domEl = document.querySelector("#recent-work");
+import projects from "../../json/recent-projects.json";
 
-// Get the project data
-const projects = await fetch("json/recent-projects.json")
-  .then((res) => res.json())
-  .then((data) => data);
+const domEl = document.querySelector("#recent-work");
 
 function renderParagraphs(paragraphs) {
   return paragraphs

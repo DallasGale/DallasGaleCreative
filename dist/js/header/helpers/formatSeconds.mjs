@@ -1,1 +1,0 @@
-function t(t){return t<10?`0${t}`:t}export default t;
