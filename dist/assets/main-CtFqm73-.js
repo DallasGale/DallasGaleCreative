@@ -247,7 +247,7 @@
       </nav>
 
       <div class="footer-ctas">
-        <a href="./src/downloads/CV_Folio.pdf" class="footer-cta">Download Folio</a>
+        <a href="/CV_Folio.pdf" class="footer-cta">Download Folio</a>
         <a href="mailto:hello@dallasgale.com" class="footer-cta" onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'CONTACT_ME_link'
