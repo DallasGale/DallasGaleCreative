@@ -29,7 +29,7 @@ const Header = () => {
     // DOM Modification
     dateElement.textContent = `It's ${parseDay(day)} ${dayOfMonth}${daySuffix(dayOfMonth)} ${formatMonth(month)}, ${year}`;
     iconElement.innerHTML = displayIcon(daySegments);
-    welcomeMSG.textContent = daySegments;
+    welcomeMSG.textContent = `Good ${daySegments}`;
     timeElement.textContent = `${formatHour(hour)}:${formatMin(mins)} ${meridiemIndicator(hour)}`;
   }
 

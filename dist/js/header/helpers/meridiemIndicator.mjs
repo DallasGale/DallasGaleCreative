@@ -1,1 +1,0 @@
-function t(t){return t>=0&&t<12?"am":t>=12&&t<=23?"pm":void 0}export default t;

@@ -1,23 +1,10 @@
-import githubIcon from "./icons/github.js";
-import linkedinIcon from "./icons/linkedin.js";
-
-const cssUrl = new URL("./styles.css", import.meta.url).href;
-
-// Create a class for the element
-export class CustomNav extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
-
-  connectedCallback() {
-    console.log("Custom element added to page.");
-    // Dom Element Creation
-    this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="${cssUrl}">
-      <nav class="nav"> 
+const Footer = () => {
+  const domEl = document.querySelector("footer");
+  if (domEl) {
+    domEl.innerHTML = `
+      <nav class="footer-nav"> 
         <div>
-          <a class="link nav-icon" href="https://github.com/dallasgale" 
+          <a class="footer-nav-link footer-nav-icon" href="https://github.com/dallasgale" 
             id="github" style="width: 24px; height: 24px;" 
             onclick="gtag('event', 'click', {
               event_category: 'outbound',
@@ -31,42 +18,38 @@ export class CustomNav extends HTMLElement {
 <path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"/>
 </g>
 </svg>
+            
           </a>
         </div>
         <div>
-          <a class="link nav-icon" href="https://www.linkedin.com/in/dallas-gale/" 
+          <a class="footer-nav-link footer-nav-icon" href="https://www.linkedin.com/in/dallas-gale/" 
             id="linkedin" style="width: 24px; height: 24px;" 
             onclick="gtag('event', 'click', {
               event_category: 'outbound',
               event_label: 'LINKEDIN_link'
             });">
-            LinkedIn
+          <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="24px" height="24px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" fill="none" width="20" height="20"/>
+<g>
+<path d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"/>
+</g>
+</svg>
           </a>
         </div>
       </nav>
-    `;
 
-    const github = this.shadowRoot.querySelector("#github");
-    github.innerHTML = githubIcon;
-    const linkedin = this.shadowRoot.querySelector("#linkedin");
-    linkedin.innerHTML = linkedinIcon;
+      <div class="footer-ctas">
+        <a href="./src/downloads/CV_Folio.pdf" class="footer-cta">Download Folio</a>
+        <a href="mailto:hello@dallasgale.com" class="footer-cta" onclick="gtag('event', 'click', {
+              event_category: 'outbound',
+              event_label: 'CONTACT_ME_link'
+            });">Contact Me</a>
+      </div>`;
   }
+  else return;
+};
 
-  // disconnectedCallback() {
-  //   console.log("Custom element removed from page.");
-  // }
-
-  // connectedMoveCallback() {
-  //   console.log("Custom element moved with moveBefore()");
-  // }
-
-  // adoptedCallback() {
-  //   console.log("Custom element moved to new page.");
-  // }
-
-  // attributeChangedCallback(name) {
-  //   console.log(`Attribute ${name} has changed.`);
-  // }
-}
-
-customElements.define("custom-nav", CustomNav);
+export default Footer;
