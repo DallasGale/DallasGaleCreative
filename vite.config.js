@@ -1,15 +1,15 @@
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
-import { defineConfig } from "vite";
-import eslint from "vite-plugin-eslint";
+import {resolve, dirname} from "path"
+import {fileURLToPath} from "url"
+import {defineConfig} from "vite"
+import eslint from "vite-plugin-eslint"
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   publicDir: "public",
   root: "./",
   build: {
-    outDir: "dist",
+    outDir: "./dist",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
@@ -45,4 +45,4 @@ export default defineConfig({
       exclude: ["node_modules", "dist", "build"],
     }),
   ],
-});
+})
