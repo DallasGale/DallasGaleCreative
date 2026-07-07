@@ -1,24 +1,5 @@
 @use "./breakpoints.scss" as bp;
 
-.recent-work-section {
-  margin-bottom: var(--space-20);
-  width: 100%;
-  // @include bp.respond-to(tablet-up) {
-  //   max-width: calc(100% - var(--space-280));
-  // }
-  @include bp.respond-to(desktop-up) {
-    margin-bottom: var(--space-100);
-    margin-left: 0;
-    margin-right: 0;
-    margin-inline: auto;
-    max-width: calc(100% - var(--space-200));
-  }
-
-  @include bp.respond-to(widescreen-up) {
-    max-width: 1480px;
-  }
-}
-
 #recent-work-heading {
   &.scrolled {
     @include bp.respond-to(desktop-up) {
@@ -51,7 +32,7 @@
   }
   .paragraph {
     color: var(--color-med-grey);
-    font-size: var(--space-14);
+    font-size: var(--space-16);
     transition: var(--transition-slow);
     @include bp.respond-to(desktop-up) {
       opacity: 0.6;

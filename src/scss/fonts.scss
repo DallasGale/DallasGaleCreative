@@ -87,3 +87,70 @@
   font-style: normal;
   font-display: swap;
 }
+
+// Barlow — single family, use via `font-family: "Barlow"` with any font-weight
+$barlow-dir: "../fonts/Barlow";
+$barlow-weights: (
+  100: "Thin",
+  200: "ExtraLight",
+  300: "Light",
+  400: "Regular",
+  500: "Medium",
+  600: "SemiBold",
+  700: "Bold",
+  800: "ExtraBold",
+  900: "Black",
+);
+
+@each $weight, $name in $barlow-weights {
+  // 400 italic file is named "Italic", others are "<Name>Italic"
+  $italic-name: $name;
+  @if $weight == 400 {
+    $italic-name: "";
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("#{$barlow-dir}/Barlow-#{$name}.ttf") format("truetype");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("#{$barlow-dir}/Barlow-#{$italic-name}Italic.ttf")
+      format("truetype");
+    font-weight: $weight;
+    font-style: italic;
+    font-display: swap;
+  }
+}
+
+// Barlow Semi Condensed — use via `font-family: "Barlow Semi Condensed"`
+$barlow-sc-dir: "../fonts/Barlow_Semi_Condensed";
+
+@each $weight, $name in $barlow-weights {
+  $italic-name: $name;
+  @if $weight == 400 {
+    $italic-name: "";
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("#{$barlow-sc-dir}/BarlowSemiCondensed-#{$name}.ttf")
+      format("truetype");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("#{$barlow-sc-dir}/BarlowSemiCondensed-#{$italic-name}Italic.ttf")
+      format("truetype");
+    font-weight: $weight;
+    font-style: italic;
+    font-display: swap;
+  }
+}

@@ -1,0 +1,96 @@
+/**
+ * Immersive animated background gradient.
+ * Pure CSS: two large blurred colour "blobs" slowly drift + rotate over the
+ * dark site background, with a faint conic tint rotating underneath.
+ * Add `<div class="bg-gradient" aria-hidden="true"></div>` as the first child
+ * of <body>. Sits at z-index -1 (above the video layers, below content).
+ */
+
+:root {
+  /* Blob palette — tweak these to re-theme the whole effect */
+  // --bg-blob-1: var(--color-highlight);
+  --bg-blob-1: #ffffff;
+  --bg-blob-2: #0e2648; /* cool blue */
+  --bg-blob-3: #330c45; /* magenta */
+  --bg-blob-opacity: 0.35;
+  --bg-blob-blur: 120px;
+}
+
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  // opacity: 0.3;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  background-color: var(--site-bg);
+}
+
+/* Rotating conic tint sitting furthest back */
+.bg-gradient::before {
+  content: "";
+  position: absolute;
+  /* oversize so the corners never show while rotating */
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--bg-blob-2),
+    var(--bg-blob-3),
+    var(--bg-blob-1),
+    var(--bg-blob-2)
+  );
+  opacity: 0.18;
+  filter: blur(var(--bg-blob-blur));
+  animation: bg-spin 60s linear infinite;
+}
+
+/* Two drifting blobs painted with layered radial gradients */
+.bg-gradient::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    radial-gradient(40% 40% at 30% 35%, var(--bg-blob-1) 0%, transparent 60%),
+    radial-gradient(45% 45% at 70% 65%, var(--bg-blob-3) 0%, transparent 60%),
+    radial-gradient(35% 35% at 65% 25%, var(--bg-blob-2) 0%, transparent 55%);
+  opacity: var(--bg-blob-opacity);
+  filter: blur(var(--bg-blob-blur));
+  /* Continuous scale-down = the page appears to push forward through the field.
+     Opacity fades in/out at the loop edges so the reset is imperceptible. */
+  animation: bg-zoom 28s linear infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes bg-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bg-zoom {
+  0% {
+    /* start large + invisible, drift in from top-left */
+    transform: translate3d(-5%, -4%, 0) rotate(0deg) scale(2);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--bg-blob-opacity);
+  }
+  88% {
+    opacity: var(--bg-blob-opacity);
+  }
+  100% {
+    /* end small + invisible — reads as receding into the distance */
+    transform: translate3d(5%, 4%, 0) rotate(45deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* Respect users who prefer less motion — keep the gradient, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+  .bg-gradient::before,
+  .bg-gradient::after {
+    animation: none;
+  }
+}

@@ -13,3 +13,19 @@
     grid-template-columns: 25% 25% 25% 25%;
   }
 }
+
+.section {
+  margin-bottom: var(--space-20);
+  width: 100%;
+  @include bp.respond-to(desktop-up) {
+    margin-bottom: var(--space-100);
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline: auto;
+    max-width: 1300px;
+  }
+
+  @include bp.respond-to(widescreen-up) {
+    max-width: 1480px;
+  }
+}
