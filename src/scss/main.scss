@@ -1,4 +1,5 @@
 @use "./fonts.scss";
+@use "./background.scss";
 @use "./intro.scss";
 @use "./typography.scss";
 @use "./utils.scss";
@@ -201,6 +202,7 @@
   --space-296: 296px;
   --space-298: 298px;
   --space-300: 300px;
+  --space-400: 400px;
 }
 body {
   font-family: var(--default-font);
@@ -240,7 +242,7 @@ a {
   text-decoration: none;
   color: var(--color-white);
   font-weight: bold;
-  font-family: var(--default-font-bold);
+  weight: bold;
   display: inline;
 }
 
